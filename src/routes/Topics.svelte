@@ -1,20 +1,22 @@
 <script lang="ts">
   import { Link } from "svelte-routing";
-  import { focusAreas } from "../lib/data/options";
   import { organizations } from "../lib/data/organizations";
+  import { focusAreaContents } from "../lib/data/focusAreaContent";
 
   // Count organizations per focus area and filter out areas with no organizations
-  const activeFocusAreas = focusAreas.filter(area => {
-    const count = organizations.filter(org => 
-      org.focusAreas.includes(area.value)
-    ).length;
-    return count > 0;
-  });
+  const activeFocusAreas = focusAreaContents
+    .filter(area => {
+      const count = organizations.filter(org => 
+        org.focusAreas.includes(area.id)
+      ).length;
+      return count > 0;
+    })
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   // Get counts for active areas
   const focusAreaCounts = activeFocusAreas.reduce((acc, area) => {
-    acc[area.value] = organizations.filter(org => 
-      org.focusAreas.includes(area.value)
+    acc[area.id] = organizations.filter(org => 
+      org.focusAreas.includes(area.id)
     ).length;
     return acc;
   }, {} as Record<string, number>);
@@ -36,12 +38,12 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {#each activeFocusAreas as area}
       <Link 
-        to={`/focus-areas/${area.value}`}
+        to={`/focus-areas/${area.id}`}
         class="block bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
       >
-        <h3 class="text-xl font-semibold text-primary mb-2">{area.label}</h3>
+        <h3 class="text-xl font-semibold text-primary mb-2">{area.title}</h3>
         <p class="text-gray-600 mb-4">
-          {focusAreaCounts[area.value]} {focusAreaCounts[area.value] === 1 ? 'organization' : 'organizations'} working in this area
+          {focusAreaCounts[area.id]} {focusAreaCounts[area.id] === 1 ? 'organization' : 'organizations'} working in this area
         </p>
         <span class="text-secondary hover:text-primary transition-colors">
           Learn more →

@@ -6,7 +6,13 @@ export const currentFocusArea = writable<FocusAreaContent | null>(null);
 export const currentEngagementType = writable<string | null>(null);
 
 export function setCurrentFocusArea(id: string) {
-  const area = focusAreaContents.find(area => area.id === id);
+  const sortedFocusAreaContents = [...focusAreaContents].sort((a, b) => {
+    const titleA = a.title || '';
+    const titleB = b.title || '';
+    return titleA.localeCompare(titleB);
+  });
+  
+  const area = sortedFocusAreaContents.find(area => area.id === id);
   currentFocusArea.set(area || null);
 }
 

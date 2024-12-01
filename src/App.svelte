@@ -9,6 +9,7 @@
   import Topics from "./routes/Topics.svelte";
   import GetInvolved from "./routes/GetInvolved.svelte";
   import ErrorBoundary from "./lib/components/shared/ErrorBoundary.svelte";
+  import About from "./routes/About.svelte";
   
   export let url = "";
 </script>
@@ -32,6 +33,7 @@
         </Route>
         <Route path="/topics" component={Topics} />
         <Route path="/get-involved" component={GetInvolved} />
+        <Route path="/about" component={About} />
       </main>
     </div>
   </Router>

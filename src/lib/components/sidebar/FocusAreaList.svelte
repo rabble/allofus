@@ -1,20 +1,43 @@
 <script lang="ts">
   import { Link } from "svelte-routing";
-  import { focusAreas } from "../../data/options";
   import { organizations } from "../../data/organizations";
+  import { focusAreaContents } from "../../data/focusAreaContent";
   
   export let currentFocusArea: string | null = null;
 
+  console.log("=== DEBUG START ===");
+  console.log("All Focus Area Contents:", focusAreaContents);
+  console.log("All Organizations:", organizations);
+  console.log("Current Focus Area:", currentFocusArea);
+
   // Count organizations per focus area
-  const focusAreaCounts = focusAreas.reduce((acc, area) => {
-    acc[area.value] = organizations.filter(org => 
-      org.focusAreas.includes(area.value)
+  const focusAreaCounts = focusAreaContents.reduce((acc, area) => {
+    const count = organizations.filter(org => 
+      org.focusAreas.includes(area.id)
     ).length;
+    console.log(`Count for ${area.id}:`, count);
+    acc[area.id] = count;
     return acc;
   }, {} as Record<string, number>);
 
+  console.log("Focus Area Counts:", focusAreaCounts);
+
   // Filter out areas with no organizations
-  const activeAreas = focusAreas.filter(area => focusAreaCounts[area.value] > 0);
+  const activeAreas = focusAreaContents
+    .filter(area => {
+      const hasOrgs = focusAreaCounts[area.id] > 0;
+      console.log(`${area.id} has organizations:`, hasOrgs);
+      return hasOrgs;
+    })
+    .map(area => ({
+      value: area.id,
+      label: area.title,
+      title: area.title
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  console.log("Final Active Areas:", activeAreas);
+  console.log("=== DEBUG END ===");
 </script>
 
 <div class="p-4">

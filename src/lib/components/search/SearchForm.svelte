@@ -2,7 +2,22 @@
   import { searchFilters } from '../../stores/searchStore';
   import SearchField from './SearchField.svelte';
   import { engagementTypes, focusAreas } from '../../data/options';
-  import { navigate } from 'svelte-routing';
+  import { focusAreaContents } from '../../data/focusAreaContent';
+  import { navigate, Link } from 'svelte-routing';
+
+  const sortedFocusAreas = focusAreas.sort((a, b) => {
+    const areaA = focusAreaContents.find(f => f.id === a.value);
+    const areaB = focusAreaContents.find(f => f.id === b.value);
+    if (areaA && areaB) {
+      return areaA.title.localeCompare(areaB.title);
+    } else if (areaA) {
+      return -1;
+    } else if (areaB) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 
   function handleSubmit() {
     const queryParams = new URLSearchParams();
@@ -29,7 +44,7 @@
     type="select"
   >
     <option value="">Select focus area</option>
-    {#each focusAreas as area}
+    {#each sortedFocusAreas as area}
       <option value={area.value}>{area.label}</option>
     {/each}
   </SearchField>
@@ -55,3 +70,11 @@
     </button>
   </div>
 </form>
+
+<nav>
+  <ul>
+    <li><Link to="/topics">Topics</Link></li>
+    <li><Link to="/get-involved">Get Involved</Link></li>
+    <li><Link to="/about">About</Link></li>
+  </ul>
+</nav>

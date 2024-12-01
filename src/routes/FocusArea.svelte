@@ -13,10 +13,11 @@
     setCurrentFocusArea(id);
   }
   
-  $: focusArea = focusAreaContents.find(area => area.id === id);
-  $: relatedOrganizations = organizations.filter(org => 
-    org.focusAreas.includes(id)
-  );
+  $: focusArea = focusAreaContents
+    .find(area => area.id === id);
+  $: relatedOrganizations = organizations
+    .filter(org => org.focusAreas.includes(id))
+    .sort((a, b) => a.name.localeCompare(b.name));
 </script>
 
 <div class="container mx-auto px-4 py-8">
