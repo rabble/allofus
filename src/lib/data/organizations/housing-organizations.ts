@@ -9,7 +9,15 @@ export const housingOrganizations: Organization[] = [
     website: "https://righttothecity.org",
     focusAreas: ["housing", "racial", "economic", "direct-democracy"],
     engagementTypes: ["in-person", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    "staff": {
+      "range": [15, 25],
+      "description": "Estimated number of core staff coordinating nationwide efforts."
+    },
+    "supporter": {
+      "range": [5000, 10000],
+      "description": "Estimated number of supporters and members involved through affiliated organizations across the country."
+    }
   },
   {
     id: "homes-for-all",

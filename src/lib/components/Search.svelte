@@ -7,15 +7,21 @@
     "In-person",
     "Online",
     "Hybrid",
-    "Messaging",
-    "Event Planning",
-    "Tech Support",
-    "Administrative",
-    "Outreach",
+    "Construction",
+    "Cooking",
+    "Driving/transporting",
+    "Editing",
+    "Event/protest planning & logistics",
     "Fundraising",
-    "Medical",
     "Legal",
-    "Transportation"
+    "Medical",
+    "Messaging (arts/media/graphics)",
+    "Outreach",
+    "Participate in trainings",
+    "Research",
+    "Strike Support",
+    "Sanctuary support",
+    "Tech support (programming, etc.)"
   ];
 </script>
 

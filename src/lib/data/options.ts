@@ -5,26 +5,45 @@ export const focusAreas = focusAreaContents.map(area => ({
   label: area.title
 }));
 
-export const engagementTypes = [
+// Define a type for engagement types
+export type EngagementType = 
+  | "In-person"
+  | "Online"
+  | "Hybrid"
+  | "Construction"
+  | "Cooking"
+  | "Driving/transporting"
+  | "Editing"
+  | "Event/protest planning & logistics"
+  | "Fundraising"
+  | "Legal"
+  | "Medical"
+  | "Messaging (arts/media/graphics)"
+  | "Outreach"
+  | "Participate in trainings"
+  | "Research"
+  | "Strike Support"
+  | "Sanctuary support"
+  | "Tech support (programming, etc.)";
+
+// Use the type for the engagementTypes array
+export const engagementTypes: EngagementType[] = [
   "In-person",
   "Online",
   "Hybrid",
-  "Administrative",
-  "Advocacy",
-  "Arts/Media",
-  "Community",
   "Construction",
   "Cooking",
-  "Education",
-  "Event Planning",
+  "Driving/transporting",
+  "Editing",
+  "Event/protest planning & logistics",
   "Fundraising",
   "Legal",
   "Medical",
-  "Messaging",
+  "Messaging (arts/media/graphics)",
   "Outreach",
-  "Policy",
+  "Participate in trainings",
   "Research",
-  "Tech Support",
-  "Training",
-  "Transportation"
+  "Strike Support",
+  "Sanctuary support",
+  "Tech support (programming, etc.)"
 ];

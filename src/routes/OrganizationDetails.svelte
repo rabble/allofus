@@ -68,7 +68,9 @@
           <h2 class="text-xl font-semibold mb-4">Organization Details</h2>
           <p class="text-sm text-gray-500 mb-2">*All numbers are estimates.</p>
           <ul class="list-disc list-inside text-sm text-gray-600">
-            <li>Members: {organization.membersCount || 'N/A'}</li>
+            {#if organization.membersCount}
+              <li>Members: {organization.membersCount}</li>
+            {/if}
             {#if organization.staff}
               <li>
                 Staff: {organization.staff.range[0]} - {organization.staff.range[1]} 
