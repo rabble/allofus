@@ -25,4 +25,14 @@ export interface Organization {
     instagram?: string;
   };
   logo?: string;
+  joinNowLink?: string;
+  membersCount?: number;
+  staff?: {
+    range: [number, number]; // Number range for staff
+    description: string;     // Text description for staff
+  };
+  supporter?: {
+    range: [number, number]; // Number range for supporters
+    description: string;     // Text description for supporters
+  };
 }

@@ -5,14 +5,16 @@
   import SearchContainer from '../lib/components/search/SearchContainer.svelte';
   import { searchFilters } from '../lib/stores/searchStore';
   import { initializeFromUrl /*, syncUrlWithFilters */ } from '../lib/stores/urlStore';
+  import { writable } from 'svelte/store';
+
+  // Stores for selected focus areas and engagement types
+  const selectedFocusAreas = writable<string[]>([]);
+  const selectedEngagementTypes = writable<string[]>([]);
 
   // Initialize filters from URL when component mounts
   onMount(() => {
     initializeFromUrl();
   });
-
-  // Temporarily disable URL synchronization
-  // $: $syncUrlWithFilters;
 
   $: filteredOrgs = organizations.filter(org => {
     const searchTerm = $searchFilters.location.toLowerCase();
@@ -26,11 +28,11 @@
     const descriptionMatch = !searchTerm || 
       org.description.toLowerCase().includes(searchTerm);
       
-    const focusAreaMatch = !$searchFilters.focusArea || 
-      org.focusAreas.includes($searchFilters.focusArea);
+    const focusAreaMatch = $selectedFocusAreas.length === 0 || 
+      $selectedFocusAreas.some(area => org.focusAreas.includes(area));
       
-    const engagementMatch = !$searchFilters.engagementType || 
-      org.engagementTypes.includes($searchFilters.engagementType);
+    const engagementMatch = $selectedEngagementTypes.length === 0 || 
+      $selectedEngagementTypes.some(type => org.engagementTypes.includes(type));
       
     return (locationMatch || nameMatch || descriptionMatch) && focusAreaMatch && engagementMatch;
   });
@@ -39,7 +41,10 @@
 <div class="container mx-auto px-4 py-8">
   <h1 class="text-3xl font-bold text-primary mb-6">Organizations</h1>
   
-  <SearchContainer />
+  <SearchContainer
+    bind:selectedFocusAreas={$selectedFocusAreas}
+    bind:selectedEngagementTypes={$selectedEngagementTypes}
+  />
   
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
     {#each filteredOrgs as org (org.id)}

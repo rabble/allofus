@@ -9,7 +9,16 @@ export const youthOrganizations: Organization[] = [
     website: "https://youthempowermentproject.org",
     focusAreas: ["youth", "education", "economic"],
     engagementTypes: ["in-person", "education", "training", "outreach", "direct service"],
-    locations: ["New Orleans, Louisiana"]
+    locations: ["New Orleans, Louisiana"],
+    membersCount: 150,
+    staff: {
+      range: [10, 20],
+      description: "Full-time and part-time staff dedicated to youth services."
+    },
+    supporter: {
+      range: [100, 200],
+      description: "Volunteers and community supporters engaged in various programs."
+    }
   },
   {
     id: "ace",
