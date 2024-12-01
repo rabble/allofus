@@ -20,7 +20,7 @@
   <div class="grid md:grid-cols-3 gap-6">
     <div>
       <label class="block text-sm font-medium text-gray-700 mb-2" for="location">
-        Location
+        Search
       </label>
       <input
         bind:this={locationInput}
@@ -29,7 +29,7 @@
         bind:value={$searchFilters.location}
         on:input={handleLocationInputChange}
         class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-accent"
-        placeholder="Enter city or state"
+        placeholder="Search for an organization or location"
       />
     </div>
     
