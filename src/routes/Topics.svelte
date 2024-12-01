@@ -1,0 +1,52 @@
+<script lang="ts">
+  import { Link } from "svelte-routing";
+  import { focusAreas } from "../lib/data/options";
+  import { organizations } from "../lib/data/organizations";
+
+  // Count organizations per focus area and filter out areas with no organizations
+  const activeFocusAreas = focusAreas.filter(area => {
+    const count = organizations.filter(org => 
+      org.focusAreas.includes(area.value)
+    ).length;
+    return count > 0;
+  });
+
+  // Get counts for active areas
+  const focusAreaCounts = activeFocusAreas.reduce((acc, area) => {
+    acc[area.value] = organizations.filter(org => 
+      org.focusAreas.includes(area.value)
+    ).length;
+    return acc;
+  }, {} as Record<string, number>);
+</script>
+
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-primary mb-6">Movement Topics</h1>
+  
+  <div class="bg-white shadow-lg rounded-lg p-8 mb-12">
+    <h2 class="text-2xl font-bold text-primary mb-4">About All of US Directory</h2>
+    <p class="text-lg text-gray-700 mb-6">
+      Welcome to the All of US Directory, a comprehensive resource connecting individuals with organizations working across various social justice movements. Our directory helps you discover and engage with groups making real change in communities across the country.
+    </p>
+    <p class="text-lg text-gray-700">
+      Browse the topics below to learn more about each movement area and find organizations working on issues you care about. Whether you're looking to get involved locally or connect with national campaigns, you'll find opportunities to contribute your skills and energy to building a better world.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {#each activeFocusAreas as area}
+      <Link 
+        to={`/focus-areas/${area.value}`}
+        class="block bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
+      >
+        <h3 class="text-xl font-semibold text-primary mb-2">{area.label}</h3>
+        <p class="text-gray-600 mb-4">
+          {focusAreaCounts[area.value]} {focusAreaCounts[area.value] === 1 ? 'organization' : 'organizations'} working in this area
+        </p>
+        <span class="text-secondary hover:text-primary transition-colors">
+          Learn more →
+        </span>
+      </Link>
+    {/each}
+  </div>
+</div>
