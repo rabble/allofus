@@ -28,7 +28,7 @@
     </Link>
     
     <div class="bg-white shadow-lg rounded-lg p-8">
-      <div class="flex items-start justify-between mb-6">
+      <div class="flex items-start justify-between mb-6 h-32">
         <div>
           <h1 class="text-4xl font-bold text-primary mb-2">{organization.name}</h1>
           <span class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
@@ -39,7 +39,7 @@
           <img 
             src={organization.logo} 
             alt={`${organization.name} logo`} 
-            class="h-20 w-20 object-contain"
+            class="h-full w-auto object-contain"
           />
         {/if}
       </div>
