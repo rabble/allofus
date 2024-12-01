@@ -15,10 +15,16 @@
   // $: $syncUrlWithFilters;
 
   $: filteredOrgs = organizations.filter(org => {
-    const locationMatch = !$searchFilters.location || 
-      org.locations.some(loc => 
-        loc.toLowerCase().includes($searchFilters.location.toLowerCase())
-      );
+    const searchTerm = $searchFilters.location.toLowerCase();
+    
+    const locationMatch = !searchTerm || 
+      org.locations.some(loc => loc.toLowerCase().includes(searchTerm));
+      
+    const nameMatch = !searchTerm || 
+      org.name.toLowerCase().includes(searchTerm);
+      
+    const descriptionMatch = !searchTerm || 
+      org.description.toLowerCase().includes(searchTerm);
       
     const focusAreaMatch = !$searchFilters.focusArea || 
       org.focusAreas.includes($searchFilters.focusArea);
@@ -26,7 +32,7 @@
     const engagementMatch = !$searchFilters.engagementType || 
       org.engagementTypes.includes($searchFilters.engagementType);
       
-    return locationMatch && focusAreaMatch && engagementMatch;
+    return (locationMatch || nameMatch || descriptionMatch) && focusAreaMatch && engagementMatch;
   });
 </script>
 
