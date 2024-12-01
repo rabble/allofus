@@ -1,47 +1,51 @@
-# Svelte + TS + Vite
+# All of US Directory
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+A directory connecting individuals with organizations working across various social justice movements. Our platform helps you discover and engage with groups making real change in communities across the country.
 
-## Recommended IDE Setup
+## Mission
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+All of US provides action pathways for each of us to come together to make our communities, our jobs, and our daily lives better for all of us. We are here as a service during difficult times, connecting people who care about their communities with organizations working on a wide range of issues throughout the country.
 
-## Need an official Svelte framework?
+The groups in this directory offer ways for people to:
+- Support each other after extreme weather disasters
+- Stop evictions and deportations
+- Work for higher wages and workplace respect
+- Advance racial and gender justice
+- Bring healthcare and reproductive rights to all
+- Protect our environment and achieve climate justice
+- Get involved in elections locally and nationally
+- And much more
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Technology
 
-## Technical considerations
+Built with:
+- [SvelteKit](https://kit.svelte.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Hosted on [Netlify](https://www.netlify.com/)
 
-**Why use this over SvelteKit?**
+## Development
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+1. Clone the repository:
+bash
+git clone https://github.com/yourusername/all-of-us-directory.git
+cd all-of-us-directory
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+## Deployment
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+The site is automatically deployed to Netlify when changes are pushed to the main branch. You can configure your own deployment by:
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+1. Fork this repository
+2. Connect it to your Netlify account
+3. Configure the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `build`
+   - Node version: 18.x
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+## Contributing
 
-**Why include `.vscode/extensions.json`?**
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+## License
 
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+MIT License - See [LICENSE](LICENSE) for details.
