@@ -4,15 +4,15 @@
   import OrganizationCard from '../lib/components/organizations/OrganizationCard.svelte';
   import SearchContainer from '../lib/components/search/SearchContainer.svelte';
   import { searchFilters } from '../lib/stores/searchStore';
-  import { initializeFromUrl, syncUrlWithFilters } from '../lib/stores/urlStore';
+  import { initializeFromUrl /*, syncUrlWithFilters */ } from '../lib/stores/urlStore';
 
   // Initialize filters from URL when component mounts
   onMount(() => {
     initializeFromUrl();
   });
 
-  // Keep URL in sync with filters
-  $: $syncUrlWithFilters;
+  // Temporarily disable URL synchronization
+  // $: $syncUrlWithFilters;
 
   $: filteredOrgs = organizations.filter(org => {
     const locationMatch = !$searchFilters.location || 

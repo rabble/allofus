@@ -70,11 +70,3 @@
     </button>
   </div>
 </form>
-
-<nav>
-  <ul>
-    <li><Link to="/topics">Topics</Link></li>
-    <li><Link to="/get-involved">Get Involved</Link></li>
-    <li><Link to="/about">About</Link></li>
-  </ul>
-</nav>

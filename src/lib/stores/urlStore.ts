@@ -24,25 +24,29 @@ function createUrlParamsStore() {
 
 export const urlParams = createUrlParamsStore();
 
-// Sync URL parameters with search filters
-export const syncUrlWithFilters = derived(
-  searchFilters,
-  ($searchFilters, set) => {
-    const params = new URLSearchParams();
-    
-    if ($searchFilters.location) {
-      params.set('location', $searchFilters.location);
-    }
-    if ($searchFilters.focusArea) {
-      params.set('focusArea', $searchFilters.focusArea);
-    }
-    if ($searchFilters.engagementType) {
-      params.set('engagementType', $searchFilters.engagementType);
-    }
-    
-    urlParams.set(params);
-  }
-);
+// Debounce function to limit the frequency of URL updates
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+// Derived store to sync URL with filters, debounced
+export const syncUrlWithFilters = derived(searchFilters, ($searchFilters, set) => {
+  const updateUrl = debounce(() => {
+    const queryParams = new URLSearchParams();
+    if ($searchFilters.location) queryParams.set('location', $searchFilters.location);
+    if ($searchFilters.focusArea) queryParams.set('focusArea', $searchFilters.focusArea);
+    if ($searchFilters.engagementType) queryParams.set('engagementType', $searchFilters.engagementType);
+
+    history.replaceState(null, '', `?${queryParams.toString()}`);
+    set($searchFilters);
+  }, 300); // Adjust the debounce delay as needed
+
+  updateUrl();
+});
 
 // Initialize search filters from URL parameters
 export function initializeFromUrl() {
