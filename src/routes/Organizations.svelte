@@ -21,12 +21,19 @@
   let filteredOrgs: Organization[] = [];
 
   $: {
-    console.log('Search Filters:', $searchFilters);
-    console.log('Selected Focus Areas:', $selectedFocusAreas);
-    console.log('Selected Engagement Types:', $selectedEngagementTypes);
+    // Add guard clauses to prevent accessing properties of undefined
+    const filters = $searchFilters || { location: '', focusArea: '', engagementType: '' };
+    const focusAreas = $selectedFocusAreas || [];
+    const engagementTypes = $selectedEngagementTypes || [];
 
-    filteredOrgs = organizations.filter(org => {
-      const searchTerm = $searchFilters.location.toLowerCase();
+    console.log('Search Filters:', filters);
+    console.log('Selected Focus Areas:', focusAreas);
+    console.log('Selected Engagement Types:', engagementTypes);
+
+    const isFilterEmpty = !filters.location && focusAreas.length === 0 && engagementTypes.length === 0;
+
+    filteredOrgs = isFilterEmpty ? organizations : organizations.filter(org => {
+      const searchTerm = (filters.location || '').toLowerCase();
       console.log('Current Organization:', org.name);
 
       const locationMatch = !searchTerm || 
@@ -36,13 +43,9 @@
       const descriptionMatch = !searchTerm || 
         org.description.toLowerCase().includes(searchTerm);
       console.log('Organization Focus Areas:', org.focusAreas);
-      console.log('Selected Focus Areas:', $selectedFocusAreas);
+      console.log('Selected Focus Areas:', focusAreas);
 
-      const focusAreaMatch = $selectedFocusAreas.every(area => {
-        if (typeof area.value !== 'string') {
-          console.error('Non-string value found in selectedFocusAreas:', area);
-          return false;
-        }
+      const focusAreaMatch = focusAreas.every(area => {
         return org.focusAreas.some(orgArea => 
           orgArea.toLowerCase() === area.value.toLowerCase()
         );
@@ -50,7 +53,7 @@
 
       console.log('Focus Area Match:', focusAreaMatch);
 
-      const engagementMatch = $selectedEngagementTypes.every(type => 
+      const engagementMatch = engagementTypes.every(type => 
         org.engagementTypes.includes(type)
       );
 
