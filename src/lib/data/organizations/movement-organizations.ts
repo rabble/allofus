@@ -9,7 +9,8 @@ export const movementOrganizations: Organization[] = [
     website: "https://350.org",
     focusAreas: ["climate", "community"],
     engagementTypes: ["in-person", "online", "event planning", "outreach"],
-    locations: ["International", "USA"]
+    locations: ["International", "USA"],
+    logo: ""
   },
   {
     id: "blm-foundation",
@@ -19,7 +20,8 @@ export const movementOrganizations: Organization[] = [
     website: "https://blacklivesmatter.com",
     focusAreas: ["racial", "community"],
     engagementTypes: ["in-person", "online", "event planning", "outreach"],
-    locations: ["International", "USA", "UK", "Canada"]
+    locations: ["International", "USA", "UK", "Canada"],
+    logo: ""
   },
   {
     id: "mijente",
@@ -40,7 +42,8 @@ export const movementOrganizations: Organization[] = [
     website: "https://www.domesticworkers.org",
     focusAreas: ["workplace", "feminism", "economic"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "byp100",
@@ -50,6 +53,7 @@ export const movementOrganizations: Organization[] = [
     website: "https://www.byp100.org",
     focusAreas: ["racial", "youth", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   }
 ];

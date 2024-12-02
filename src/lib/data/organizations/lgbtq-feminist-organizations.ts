@@ -9,7 +9,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://www.lacolectivapr.org",
     focusAreas: ["feminism", "lgbtqia", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["Puerto Rico"]
+    locations: ["Puerto Rico"],
+    logo: ""
   },
   {
     id: "trans-lifeline",
@@ -19,7 +20,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://translifeline.org",
     focusAreas: ["lgbtqia", "healthcare", "legal"],
     engagementTypes: ["online", "messaging", "tech support", "administrative"],
-    locations: ["United States"]
+    locations: ["United States"],
+    logo: ""
   },
   {
     id: "black-women-radicals",
@@ -29,7 +31,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://www.blackwomenradicals.com",
     focusAreas: ["feminism", "racial", "lgbtqia", "community"],
     engagementTypes: ["online", "outreach", "event planning", "administrative"],
-    locations: ["United States"]
+    locations: ["United States"],
+    logo: ""
   },
   {
     id: "gender-justice-la",
@@ -39,7 +42,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://www.genderjusticela.org",
     focusAreas: ["lgbtqia", "racial", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["Los Angeles, CA"]
+    locations: ["Los Angeles, CA"],
+    logo: ""
   },
   {
     id: "glits",
@@ -49,7 +53,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://www.glitsinc.org",
     focusAreas: ["lgbtqia", "healthcare", "housing", "community"],
     engagementTypes: ["in-person", "outreach", "event planning", "administrative"],
-    locations: ["New York, NY"]
+    locations: ["New York, NY"],
+    logo: ""
   },
   {
     id: "for-the-gworls",
@@ -59,7 +64,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://www.forthegworls.party",
     focusAreas: ["lgbtqia", "economic", "healthcare", "community"],
     engagementTypes: ["in-person", "event planning", "fundraising"],
-    locations: ["United States"]
+    locations: ["United States"],
+    logo: ""
   },
   {
     id: "transgender-law-center",
@@ -69,7 +75,8 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://transgenderlawcenter.org",
     focusAreas: ["lgbtqia", "legal", "policy"],
     engagementTypes: ["online", "legal", "advocacy"],
-    locations: ["United States"]
+    locations: ["United States"],
+    logo: ""
   },
   {
     id: "sylvia-rivera-law",
@@ -79,6 +86,7 @@ export const lgbtqFeministOrganizations: Organization[] = [
     website: "https://srlp.org",
     focusAreas: ["lgbtqia", "legal", "racial"],
     engagementTypes: ["in-person", "legal", "advocacy"],
-    locations: ["New York, NY"]
+    locations: ["New York, NY"],
+    logo: ""
   }
 ];

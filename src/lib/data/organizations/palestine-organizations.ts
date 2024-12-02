@@ -9,7 +9,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://uscpr.org",
     focusAreas: ["palestine", "racial", "community"],
     engagementTypes: ["online", "event planning", "outreach"],
-    locations: ["Washington, D.C."]
+    locations: ["Washington, D.C."],
+    logo: ""
   },
   {
     id: "jvp",
@@ -19,7 +20,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://jewishvoiceforpeace.org",
     focusAreas: ["palestine", "racial", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "sjp",
@@ -29,7 +31,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://nationalsjp.org",
     focusAreas: ["palestine", "youth", "community"],
     engagementTypes: ["in-person", "online", "event planning"],
-    locations: ["Various college campuses nationwide"]
+    locations: ["Various college campuses nationwide"],
+    logo: ""
   },
   {
     id: "amp",
@@ -39,7 +42,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://ampalestine.org",
     focusAreas: ["palestine", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "pym",
@@ -49,7 +53,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://palestinianyouthmovement.com",
     focusAreas: ["palestine", "youth", "community"],
     engagementTypes: ["in-person", "online", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "al-awda",
@@ -59,7 +64,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://al-awda.org",
     focusAreas: ["palestine", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "wol",
@@ -69,7 +75,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://wolpalestine.com",
     focusAreas: ["palestine", "community"],
     engagementTypes: ["in-person", "event planning", "outreach"],
-    locations: ["New York, NY"]
+    locations: ["New York, NY"],
+    logo: ""
   },
   {
     id: "aroc",
@@ -79,7 +86,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://araborganizing.org",
     focusAreas: ["palestine", "immigration", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["San Francisco, CA"]
+    locations: ["San Francisco, CA"],
+    logo: ""
   },
   {
     id: "uspcn",
@@ -89,7 +97,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://uspcn.org",
     focusAreas: ["palestine", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "adalah-justice",
@@ -99,7 +108,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://adalahjusticeproject.org",
     focusAreas: ["palestine", "racial", "community"],
     engagementTypes: ["online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "palestine-legal",
@@ -109,7 +119,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://palestinelegal.org",
     focusAreas: ["palestine", "legal", "community"],
     engagementTypes: ["online", "legal", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "fosna",
@@ -119,7 +130,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://fosna.org",
     focusAreas: ["palestine", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "ifnotnow",
@@ -129,7 +141,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://ifnotnowmovement.org",
     focusAreas: ["palestine", "youth", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "labor-for-palestine",
@@ -139,7 +152,8 @@ export const palestineOrganizations: Organization[] = [
     website: "https://laborforpalestine.net",
     focusAreas: ["palestine", "workplace", "community"],
     engagementTypes: ["online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "black-for-palestine",
@@ -149,6 +163,7 @@ export const palestineOrganizations: Organization[] = [
     website: "https://blackforpalestine.com",
     focusAreas: ["palestine", "racial", "community"],
     engagementTypes: ["online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   }
 ];

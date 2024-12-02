@@ -69,5 +69,20 @@
         </Link>
       </div>
     </div>
+
+    <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold text-primary mb-4">Contribute to AllOfUs</h2>
+      <p class="text-lg mb-6">
+        Do you know of an organization that should be part of our directory? You can help us grow by adding more organizations to the AllOfUs site. Your contributions will help others connect with valuable resources and support.
+      </p>
+      <div class="flex justify-center">
+        <Link
+          to="/add-organization"
+          class="bg-secondary hover:bg-primary text-white px-8 py-3 rounded-md transition-colors"
+        >
+          Add an Organization
+        </Link>
+      </div>
+    </div>
   </div>
 </div> 

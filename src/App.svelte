@@ -14,6 +14,9 @@
   import Announcements from "./routes/Announcements.svelte";
   import Reports from "./routes/Reports.svelte";
   import ReportDetails from "./routes/ReportDetails.svelte";
+  import Dashboard from "./routes/admin/Dashboard.svelte";
+  import EditOrganization from "./routes/admin/EditOrganization.svelte";
+  import AddOrganization from "./routes/AddOrganization.svelte";
   
   export let url = "";
 
@@ -52,6 +55,8 @@
         <Route path="/topics" component={Topics} />
         <Route path="/get-involved" component={GetInvolved} />
         <Route path="/about" component={About} />
+        <Route path="/admin/dashboard" component={Dashboard} />
+        <Route path="/admin/add-organization" component={AddOrganization} />
       </main>
     </div>
   </Router>

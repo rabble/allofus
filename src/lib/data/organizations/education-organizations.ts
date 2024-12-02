@@ -9,7 +9,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://reclaimourschools.org",
     focusAreas: ["education", "racial", "economic", "direct-democracy"],
     engagementTypes: ["in-person", "outreach", "education", "policy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "usas",
@@ -19,7 +20,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://usas.org",
     focusAreas: ["education", "economic", "workplace"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "student-action",
@@ -29,7 +31,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://studentaction.us",
     focusAreas: ["education", "economic", "direct-democracy"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "journey-justice",
@@ -39,7 +42,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://j4jalliance.com",
     focusAreas: ["education", "racial", "economic"],
     engagementTypes: ["in-person", "outreach", "policy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "save-our-schools",
@@ -49,7 +53,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://saveourschoolsmarch.org",
     focusAreas: ["education", "direct-democracy", "economic"],
     engagementTypes: ["in-person", "outreach", "policy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "educolor",
@@ -59,7 +64,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://educolor.org",
     focusAreas: ["education", "racial", "direct-democracy"],
     engagementTypes: ["online", "education", "policy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "free-minds",
@@ -69,7 +75,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://fmfp.org",
     focusAreas: ["education", "racial", "direct-democracy"],
     engagementTypes: ["in-person", "education", "networking"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "bats",
@@ -79,7 +86,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://badassteacher.org",
     focusAreas: ["education", "workplace", "direct-democracy"],
     engagementTypes: ["online", "policy", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "sds",
@@ -89,7 +97,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://newsds.org",
     focusAreas: ["education", "direct-democracy", "economic"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "ed-liberation",
@@ -99,7 +108,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://edliberation.org",
     focusAreas: ["education", "racial", "direct-democracy"],
     engagementTypes: ["education", "networking", "community"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "zinn-education",
@@ -109,7 +119,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://zinnedproject.org",
     focusAreas: ["education", "racial", "direct-democracy"],
     engagementTypes: ["education", "resources", "teacher support"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "tag-network",
@@ -119,7 +130,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://teacheractivistgroups.org",
     focusAreas: ["education", "workplace", "racial"],
     engagementTypes: ["networking", "education", "policy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "dignidad-literaria",
@@ -128,7 +140,8 @@ export const educationOrganizations: Organization[] = [
     category: "Education",
     focusAreas: ["education", "racial", "cultural"],
     engagementTypes: ["advocacy", "education", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "childrens-defense",
@@ -138,7 +151,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://childrensdefense.org",
     focusAreas: ["education", "economic", "racial"],
     engagementTypes: ["policy", "education", "research"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "aqe",
@@ -148,7 +162,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://aqeny.org",
     focusAreas: ["education", "economic", "racial"],
     engagementTypes: ["policy", "community", "education"],
-    locations: ["New York State"]
+    locations: ["New York State"],
+    logo: ""
   },
   {
     id: "blm-at-school",
@@ -158,7 +173,8 @@ export const educationOrganizations: Organization[] = [
     website: "https://blacklivesmatteratschool.com",
     focusAreas: ["education", "racial", "direct-democracy"],
     engagementTypes: ["education", "policy", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "student-debt-crisis",
@@ -168,6 +184,7 @@ export const educationOrganizations: Organization[] = [
     website: "https://studentdebtcrisis.org",
     focusAreas: ["education", "economic", "direct-democracy"],
     engagementTypes: ["policy", "online", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   }
 ];

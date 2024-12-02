@@ -9,7 +9,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://sistersong.net",
     focusAreas: ["reproductive", "racial", "feminism", "lgbtqia", "economic", "youth", "indigenous"],
     engagementTypes: ["in-person", "online", "hybrid", "messaging", "event planning", "outreach", "education"],
-    locations: ["Atlanta, Georgia", "National"]
+    locations: ["Atlanta, Georgia", "National"],
+    logo: ""
   },
   {
     id: "napawf",
@@ -19,7 +20,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://napawf.org",
     focusAreas: ["reproductive", "immigration", "feminism", "economic", "racial"],
     engagementTypes: ["online", "outreach", "education", "messaging"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "urge",
@@ -29,7 +31,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://urge.org",
     focusAreas: ["reproductive", "youth", "lgbtqia", "racial", "feminism", "economic"],
     engagementTypes: ["in-person", "online", "outreach", "education", "messaging"],
-    locations: ["National", "South", "Midwest"]
+    locations: ["National", "South", "Midwest"],
+    logo: ""
   },
   {
     id: "afiya-center",
@@ -39,7 +42,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://theafiyacenter.org",
     focusAreas: ["reproductive", "racial", "feminism"],
     engagementTypes: ["in-person", "outreach", "education", "direct service", "messaging"],
-    locations: ["Dallas, Texas"]
+    locations: ["Dallas, Texas"],
+    logo: ""
   },
   {
     id: "black-mamas-matter",
@@ -49,7 +53,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://blackmamasmatter.org",
     focusAreas: ["reproductive", "racial", "feminism"],
     engagementTypes: ["online", "outreach", "education", "messaging"],
-    locations: ["Atlanta, Georgia", "National"]
+    locations: ["Atlanta, Georgia", "National"],
+    logo: ""
   },
   {
     id: "indigenous-women-rising",
@@ -59,7 +64,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://iwrising.org",
     focusAreas: ["reproductive", "indigenous", "feminism"],
     engagementTypes: ["online", "outreach", "mutual aid", "direct service", "messaging", "education"],
-    locations: ["Albuquerque, New Mexico"]
+    locations: ["Albuquerque, New Mexico"],
+    logo: ""
   },
   {
     id: "arc-southeast",
@@ -69,7 +75,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://arc-southeast.org",
     focusAreas: ["reproductive", "economic", "feminism"],
     engagementTypes: ["mutual aid", "direct service", "fundraising", "outreach", "messaging"],
-    locations: ["Atlanta, Georgia", "Southeast US"]
+    locations: ["Atlanta, Georgia", "Southeast US"],
+    logo: ""
   },
   {
     id: "nnaf",
@@ -79,7 +86,8 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://abortionfunds.org",
     focusAreas: ["reproductive", "economic", "feminism"],
     engagementTypes: ["online", "fundraising", "mutual aid", "outreach", "messaging"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "forward-together",
@@ -89,6 +97,7 @@ export const reproductiveOrganizations: Organization[] = [
     website: "https://forwardtogether.org",
     focusAreas: ["reproductive", "racial", "lgbtqia", "feminism", "immigration"],
     engagementTypes: ["online", "messaging", "outreach", "education"],
-    locations: ["Oakland, California", "Oregon", "New Mexico"]
+    locations: ["Oakland, California", "Oregon", "New Mexico"],
+    logo: ""
   }
 ];

@@ -6,7 +6,10 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "$app/*": ["./.svelte-kit/types/src/app/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }

@@ -9,7 +9,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://therednation.org",
     focusAreas: ["indigenous", "climate", "economic"],
     engagementTypes: ["in-person", "education", "outreach", "online"],
-    locations: ["Albuquerque, New Mexico"]
+    locations: ["Albuquerque, New Mexico"],
+    logo: ""
   },
   {
     id: "indigenous-action",
@@ -19,7 +20,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://indigenousaction.org",
     focusAreas: ["indigenous", "climate"],
     engagementTypes: ["in-person", "online", "education", "outreach"],
-    locations: ["Flagstaff, Arizona"]
+    locations: ["Flagstaff, Arizona"],
+    logo: ""
   },
   {
     id: "landback",
@@ -29,7 +31,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://landback.org",
     focusAreas: ["indigenous", "climate"],
     engagementTypes: ["online", "in-person", "education", "outreach"],
-    locations: ["National", "USA", "Canada"]
+    locations: ["National", "USA", "Canada"],
+    logo: ""
   },
   {
     id: "apache-stronghold",
@@ -39,7 +42,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://apache-stronghold.com",
     focusAreas: ["indigenous"],
     engagementTypes: ["in-person", "legal", "education"],
-    locations: ["San Carlos Apache Reservation, Arizona"]
+    locations: ["San Carlos Apache Reservation, Arizona"],
+    logo: ""
   },
   {
     id: "water-is-life",
@@ -48,7 +52,8 @@ export const indigenousOrganizations: Organization[] = [
     category: "Indigenous Rights",
     focusAreas: ["indigenous", "climate"],
     engagementTypes: ["in-person", "outreach"],
-    locations: ["Louisiana"]
+    locations: ["Louisiana"],
+    logo: ""
   },
   {
     id: "iaf",
@@ -58,7 +63,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://iaf-fai.org",
     focusAreas: ["indigenous"],
     engagementTypes: ["online", "education", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "protect-mauna-kea",
@@ -68,7 +74,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://kahea.org",
     focusAreas: ["indigenous", "climate"],
     engagementTypes: ["in-person", "legal", "education"],
-    locations: ["Hawai'i"]
+    locations: ["Hawai'i"],
+    logo: ""
   },
   {
     id: "water-protector-legal",
@@ -78,7 +85,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://waterprotectorlegal.org",
     focusAreas: ["indigenous", "climate", "legal"],
     engagementTypes: ["legal", "education", "outreach", "fundraising"],
-    locations: ["North Dakota", "National"]
+    locations: ["North Dakota", "National"],
+    logo: ""
   },
   {
     id: "cheyenne-river-collective",
@@ -87,7 +95,8 @@ export const indigenousOrganizations: Organization[] = [
     category: "Indigenous Rights",
     focusAreas: ["indigenous", "climate"],
     engagementTypes: ["in-person", "education", "outreach"],
-    locations: ["Cheyenne River Sioux Reservation, South Dakota"]
+    locations: ["Cheyenne River Sioux Reservation, South Dakota"],
+    logo: ""
   },
   {
     id: "sovereign-bodies",
@@ -97,7 +106,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://sovereign-bodies.org",
     focusAreas: ["indigenous", "feminism"],
     engagementTypes: ["research", "education", "advocacy"],
-    locations: ["Arcata, California"]
+    locations: ["Arcata, California"],
+    logo: ""
   },
   {
     id: "warrior-women",
@@ -107,7 +117,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://warriorwomen.org",
     focusAreas: ["indigenous", "feminism"],
     engagementTypes: ["education", "outreach", "community"],
-    locations: ["Pine Ridge Reservation, South Dakota"]
+    locations: ["Pine Ridge Reservation, South Dakota"],
+    logo: ""
   },
   {
     id: "ke-infoshop",
@@ -116,7 +127,8 @@ export const indigenousOrganizations: Organization[] = [
     category: "Indigenous Rights",
     focusAreas: ["indigenous", "community"],
     engagementTypes: ["in-person", "education", "community"],
-    locations: ["Diné (Navajo Nation), Arizona"]
+    locations: ["Diné (Navajo Nation), Arizona"],
+    logo: ""
   },
   {
     id: "indigenous-mutual-aid",
@@ -126,7 +138,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://indigenousmutualaid.org",
     focusAreas: ["indigenous", "community"],
     engagementTypes: ["mutual aid", "online", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "earth-guardians",
@@ -136,7 +149,8 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://earthguardians.org",
     focusAreas: ["indigenous", "climate", "youth"],
     engagementTypes: ["education", "training", "outreach"],
-    locations: ["Boulder, Colorado", "International"]
+    locations: ["Boulder, Colorado", "International"],
+    logo: ""
   },
   {
     id: "rising-tide",
@@ -146,6 +160,7 @@ export const indigenousOrganizations: Organization[] = [
     website: "https://risingtidenorthamerica.org",
     focusAreas: ["indigenous", "climate"],
     engagementTypes: ["in-person", "outreach", "education", "online"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   }
 ];

@@ -9,7 +9,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://democracyatwork.info",
     focusAreas: ["economic", "workplace", "direct-democracy", "community"],
     engagementTypes: ["education", "training", "online", "messaging"],
-    locations: ["National", "New York"]
+    locations: ["National", "New York"],
+    logo: ""
   },
   {
     id: "usfwc",
@@ -19,7 +20,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://usworker.coop",
     focusAreas: ["economic", "workplace", "direct-democracy"],
     engagementTypes: ["in-person", "online", "hybrid", "outreach", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "cooperation-jackson",
@@ -29,7 +31,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://cooperationjackson.org",
     focusAreas: ["economic", "racial", "direct-democracy", "community", "indigenous"],
     engagementTypes: ["in-person", "outreach", "education", "mutual aid"],
-    locations: ["Jackson, Mississippi"]
+    locations: ["Jackson, Mississippi"],
+    logo: ""
   },
   {
     id: "working-world",
@@ -39,7 +42,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://theworkingworld.org",
     focusAreas: ["economic", "workplace", "direct-democracy"],
     engagementTypes: ["fundraising", "administrative", "education"],
-    locations: ["National", "Argentina", "Nicaragua"]
+    locations: ["National", "Argentina", "Nicaragua"],
+    logo: ""
   },
   {
     id: "new-economy-coalition",
@@ -49,7 +53,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://neweconomy.net",
     focusAreas: ["economic", "climate", "direct-democracy", "community", "indigenous"],
     engagementTypes: ["online", "messaging", "education", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "selc",
@@ -59,7 +64,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://theselc.org",
     focusAreas: ["economic", "direct-democracy", "community"],
     engagementTypes: ["legal", "education", "messaging"],
-    locations: ["Oakland, California"]
+    locations: ["Oakland, California"],
+    logo: ""
   },
   {
     id: "democracy-collaborative",
@@ -69,7 +75,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://democracycollaborative.org",
     focusAreas: ["economic", "direct-democracy", "community"],
     engagementTypes: ["research", "advocacy", "education", "messaging"],
-    locations: ["Washington, D.C."]
+    locations: ["Washington, D.C."],
+    logo: ""
   },
   {
     id: "center-economic-democracy",
@@ -79,7 +86,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://economicdemocracy.us",
     focusAreas: ["economic", "direct-democracy", "racial", "community"],
     engagementTypes: ["fundraising", "education", "outreach", "messaging"],
-    locations: ["Boston, Massachusetts"]
+    locations: ["Boston, Massachusetts"],
+    logo: ""
   },
   {
     id: "geo-collective",
@@ -89,7 +97,8 @@ export const economicOrganizations: Organization[] = [
     website: "https://geo.coop",
     focusAreas: ["economic", "direct-democracy", "community"],
     engagementTypes: ["messaging", "online", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "project-equity",
@@ -99,6 +108,7 @@ export const economicOrganizations: Organization[] = [
     website: "https://project-equity.org",
     focusAreas: ["economic", "workplace", "direct-democracy"],
     engagementTypes: ["outreach", "education", "messaging"],
-    locations: ["Oakland, California", "National"]
+    locations: ["Oakland, California", "National"],
+    logo: ""
   }
 ];

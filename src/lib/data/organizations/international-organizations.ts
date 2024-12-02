@@ -9,7 +9,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://grassrootsonline.org",
     focusAreas: ["international", "economic", "climate", "indigenous", "food"],
     engagementTypes: ["fundraising", "policy", "education", "outreach"],
-    locations: ["Boston, Massachusetts", "International"]
+    locations: ["Boston, Massachusetts", "International"],
+    logo: ""
   },
   {
     id: "war-on-want",
@@ -19,7 +20,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://waronwant.org",
     focusAreas: ["international", "economic", "workplace", "climate", "racial"],
     engagementTypes: ["in-person", "policy", "education", "outreach"],
-    locations: ["United Kingdom", "International"]
+    locations: ["United Kingdom", "International"],
+    logo: ""
   },
   {
     id: "global-exchange",
@@ -29,7 +31,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://globalexchange.org",
     focusAreas: ["international", "economic", "climate"],
     engagementTypes: ["education", "travel", "policy", "online"],
-    locations: ["San Francisco, California", "International"]
+    locations: ["San Francisco, California", "International"],
+    logo: ""
   },
   {
     id: "codepink",
@@ -39,7 +42,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://codepink.org",
     focusAreas: ["international", "feminism"],
     engagementTypes: ["in-person", "policy", "education", "online"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "witness-peace",
@@ -49,7 +53,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://solidaritycollective.org",
     focusAreas: ["international", "economic", "immigration"],
     engagementTypes: ["education", "advocacy", "online", "outreach"],
-    locations: ["Washington, D.C.", "Latin America", "Caribbean"]
+    locations: ["Washington, D.C.", "Latin America", "Caribbean"],
+    logo: ""
   },
   {
     id: "mst-friends",
@@ -59,7 +64,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://mstbrazil.org",
     focusAreas: ["international", "economic", "food"],
     engagementTypes: ["education", "fundraising", "outreach"],
-    locations: ["USA", "Brazil"]
+    locations: ["USA", "Brazil"],
+    logo: ""
   },
   {
     id: "global-justice-now",
@@ -69,7 +75,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://globaljustice.org.uk",
     focusAreas: ["international", "economic", "climate", "direct-democracy"],
     engagementTypes: ["in-person", "policy", "education", "online"],
-    locations: ["United Kingdom", "International"]
+    locations: ["United Kingdom", "International"],
+    logo: ""
   },
   {
     id: "witness-org",
@@ -79,7 +86,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://witness.org",
     focusAreas: ["international", "direct-democracy"],
     engagementTypes: ["education", "training", "tech support"],
-    locations: ["Brooklyn, New York", "International"]
+    locations: ["Brooklyn, New York", "International"],
+    logo: ""
   },
   {
     id: "awid",
@@ -89,7 +97,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://awid.org",
     focusAreas: ["international", "feminism"],
     engagementTypes: ["advocacy", "education", "networking"],
-    locations: ["International"]
+    locations: ["International"],
+    logo: ""
   },
   {
     id: "democracy-center",
@@ -99,7 +108,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://democracyctr.org",
     focusAreas: ["international", "climate", "economic", "direct-democracy"],
     engagementTypes: ["research", "education", "advocacy"],
-    locations: ["San Francisco, California", "Cochabamba, Bolivia"]
+    locations: ["San Francisco, California", "Cochabamba, Bolivia"],
+    logo: ""
   },
   {
     id: "survival-international",
@@ -109,7 +119,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://survivalinternational.org",
     focusAreas: ["international", "indigenous"],
     engagementTypes: ["advocacy", "education", "outreach"],
-    locations: ["United Kingdom", "International"]
+    locations: ["United Kingdom", "International"],
+    logo: ""
   },
   {
     id: "justice-is-global",
@@ -119,7 +130,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://justiceisglobal.org",
     focusAreas: ["international", "economic", "racial"],
     engagementTypes: ["policy", "online", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "karibu-foundation",
@@ -129,7 +141,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://karibu.no",
     focusAreas: ["international", "economic", "climate"],
     engagementTypes: ["fundraising", "networking", "advocacy"],
-    locations: ["Oslo, Norway", "International"]
+    locations: ["Oslo, Norway", "International"],
+    logo: ""
   },
   {
     id: "soaw",
@@ -139,7 +152,8 @@ export const internationalOrganizations: Organization[] = [
     website: "https://soaw.org",
     focusAreas: ["international", "direct-democracy"],
     engagementTypes: ["in-person", "education", "advocacy", "online"],
-    locations: ["Washington, D.C.", "U.S.-Latin America border"]
+    locations: ["Washington, D.C.", "U.S.-Latin America border"],
+    logo: ""
   },
   {
     id: "apwld",
@@ -149,6 +163,7 @@ export const internationalOrganizations: Organization[] = [
     website: "https://apwld.org",
     focusAreas: ["international", "feminism", "economic"],
     engagementTypes: ["advocacy", "education", "networking"],
-    locations: ["Chiang Mai, Thailand", "Asia Pacific"]
+    locations: ["Chiang Mai, Thailand", "Asia Pacific"],
+    logo: ""
   }
 ];

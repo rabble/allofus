@@ -9,7 +9,8 @@ export const justiceOrganizations2: Organization[] = [
     website: "https://www.ctwo.org",
     focusAreas: ["racial", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "domestic-workers-united",
@@ -19,7 +20,8 @@ export const justiceOrganizations2: Organization[] = [
     website: "https://www.domesticworkersunited.org",
     focusAreas: ["workplace", "feminism"],
     engagementTypes: ["in-person", "outreach", "administrative"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "nfwm",
@@ -29,7 +31,8 @@ export const justiceOrganizations2: Organization[] = [
     website: "https://www.nfwm.org",
     focusAreas: ["workplace", "community"],
     engagementTypes: ["in-person", "outreach", "administrative"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "alliance-just-society",
@@ -39,7 +42,8 @@ export const justiceOrganizations2: Organization[] = [
     website: "https://www.allianceforajustsociety.org",
     focusAreas: ["economic", "community"],
     engagementTypes: ["online", "messaging", "administrative"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "ella-baker-center",
@@ -49,6 +53,7 @@ export const justiceOrganizations2: Organization[] = [
     website: "https://ellabakercenter.org",
     focusAreas: ["racial", "community"],
     engagementTypes: ["in-person", "online", "outreach"],
-    locations: ["California"]
+    locations: ["California"],
+    logo: ""
   }
 ];

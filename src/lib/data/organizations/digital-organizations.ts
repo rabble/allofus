@@ -9,7 +9,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://eff.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["legal", "policy", "education", "tech support"],
-    locations: ["San Francisco, California", "International"]
+    locations: ["San Francisco, California", "International"],
+    logo: ""
   },
   {
     id: "fight-for-future",
@@ -19,7 +20,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://fightforthefuture.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["online", "policy", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "tor-project",
@@ -29,7 +31,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://torproject.org",
     focusAreas: ["privacy"],
     engagementTypes: ["tech support", "education", "online"],
-    locations: ["Global"]
+    locations: ["Global"],
+    logo: ""
   },
   {
     id: "access-now",
@@ -39,7 +42,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://accessnow.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["policy", "legal", "tech support"],
-    locations: ["Global"]
+    locations: ["Global"],
+    logo: ""
   },
   {
     id: "open-rights-group",
@@ -49,7 +53,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://openrightsgroup.org",
     focusAreas: ["privacy"],
     engagementTypes: ["policy", "education", "outreach"],
-    locations: ["United Kingdom"]
+    locations: ["United Kingdom"],
+    logo: ""
   },
   {
     id: "mozilla-foundation",
@@ -59,7 +64,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://foundation.mozilla.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["tech support", "education", "grants"],
-    locations: ["California", "Global"]
+    locations: ["California", "Global"],
+    logo: ""
   },
   {
     id: "cdt",
@@ -69,7 +75,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://cdt.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["policy", "legal", "education"],
-    locations: ["Washington, D.C.", "Brussels"]
+    locations: ["Washington, D.C.", "Brussels"],
+    logo: ""
   },
   {
     id: "privacy-international",
@@ -79,7 +86,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://privacyinternational.org",
     focusAreas: ["privacy"],
     engagementTypes: ["research", "legal", "education"],
-    locations: ["London", "Global"]
+    locations: ["London", "Global"],
+    logo: ""
   },
   {
     id: "digital-rights-watch",
@@ -89,7 +97,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://digitalrightswatch.org.au",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["policy", "education", "outreach"],
-    locations: ["Australia"]
+    locations: ["Australia"],
+    logo: ""
   },
   {
     id: "net-freedom-pioneers",
@@ -99,7 +108,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://netfreedompioneers.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["tech support", "education", "outreach"],
-    locations: ["Global"]
+    locations: ["Global"],
+    logo: ""
   },
   {
     id: "riseup",
@@ -109,7 +119,8 @@ export const digitalOrganizations: Organization[] = [
     website: "https://riseup.net",
     focusAreas: ["privacy"],
     engagementTypes: ["tech support", "education", "community"],
-    locations: ["Global"]
+    locations: ["Global"],
+    logo: ""
   },
   {
     id: "internet-society",
@@ -119,6 +130,7 @@ export const digitalOrganizations: Organization[] = [
     website: "https://internetsociety.org",
     focusAreas: ["privacy", "direct-democracy"],
     engagementTypes: ["policy", "education", "community"],
-    locations: ["Global"]
+    locations: ["Global"],
+    logo: ""
   }
 ];

@@ -27,7 +27,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://homesforall.org",
     focusAreas: ["housing", "economic", "racial"],
     engagementTypes: ["in-person", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "community-land-trusts",
@@ -37,7 +38,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://cltnetwork.org",
     focusAreas: ["housing", "economic", "community"],
     engagementTypes: ["education", "training", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "new-economy-project",
@@ -47,7 +49,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://neweconomynyc.org",
     focusAreas: ["housing", "economic", "direct-democracy"],
     engagementTypes: ["outreach", "education", "legal"],
-    locations: ["New York City"]
+    locations: ["New York City"],
+    logo: ""
   },
   {
     id: "anti-eviction-mapping",
@@ -57,7 +60,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://antievictionmap.com",
     focusAreas: ["housing", "racial", "economic"],
     engagementTypes: ["research", "education", "online"],
-    locations: ["San Francisco Bay Area", "Los Angeles", "New York City"]
+    locations: ["San Francisco Bay Area", "Los Angeles", "New York City"],
+    logo: ""
   },
   {
     id: "la-tenants-union",
@@ -67,7 +71,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://latenantsunion.org",
     focusAreas: ["housing", "economic", "racial"],
     engagementTypes: ["in-person", "legal", "outreach"],
-    locations: ["Los Angeles, California"]
+    locations: ["Los Angeles, California"],
+    logo: ""
   },
   {
     id: "right-to-counsel-nyc",
@@ -77,7 +82,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://righttocounselnyc.org",
     focusAreas: ["housing", "legal", "economic"],
     engagementTypes: ["legal", "outreach", "education"],
-    locations: ["New York City"]
+    locations: ["New York City"],
+    logo: ""
   },
   {
     id: "city-life",
@@ -87,7 +93,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://clvu.org",
     focusAreas: ["housing", "economic", "racial"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["Boston, Massachusetts"]
+    locations: ["Boston, Massachusetts"],
+    logo: ""
   },
   {
     id: "homes-guarantee",
@@ -97,7 +104,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://peoplesaction.org/homesguarantee",
     focusAreas: ["housing", "economic", "climate"],
     engagementTypes: ["online", "outreach", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "cooperative-housing-intl",
@@ -107,7 +115,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://housinginternational.coop",
     focusAreas: ["housing", "economic", "direct-democracy"],
     engagementTypes: ["education", "training", "outreach"],
-    locations: ["International"]
+    locations: ["International"],
+    logo: ""
   },
   {
     id: "nlihc",
@@ -117,7 +126,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://nlihc.org",
     focusAreas: ["housing", "economic"],
     engagementTypes: ["research", "outreach", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "take-back-land",
@@ -127,7 +137,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://takebacktheland.org",
     focusAreas: ["housing", "economic", "racial"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "village-collaborative",
@@ -137,7 +148,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://thevillagecollaborative.net",
     focusAreas: ["housing", "economic", "community"],
     engagementTypes: ["education", "training", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "portland-tenants",
@@ -147,7 +159,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://pdxtu.org",
     focusAreas: ["housing", "economic"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["Portland, Oregon"]
+    locations: ["Portland, Oregon"],
+    logo: ""
   },
   {
     id: "ebprec",
@@ -157,7 +170,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://ebprec.org",
     focusAreas: ["housing", "economic", "direct-democracy"],
     engagementTypes: ["education", "outreach", "training"],
-    locations: ["Oakland, California"]
+    locations: ["Oakland, California"],
+    logo: ""
   },
   {
     id: "moms-4-housing",
@@ -167,7 +181,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://moms4housing.org",
     focusAreas: ["housing", "economic", "racial"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["Oakland, California"]
+    locations: ["Oakland, California"],
+    logo: ""
   },
   {
     id: "nyc-cli",
@@ -177,7 +192,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://nyccli.org",
     focusAreas: ["housing", "economic", "direct-democracy"],
     engagementTypes: ["education", "training", "outreach"],
-    locations: ["New York City"]
+    locations: ["New York City"],
+    logo: ""
   },
   {
     id: "borderland-collective",
@@ -186,7 +202,8 @@ export const housingOrganizations: Organization[] = [
     category: "Housing Rights",
     focusAreas: ["housing", "immigration", "economic"],
     engagementTypes: ["in-person", "outreach", "mutual aid"],
-    locations: ["Border regions"]
+    locations: ["Border regions"],
+    logo: ""
   },
   {
     id: "casa-latinx",
@@ -195,7 +212,8 @@ export const housingOrganizations: Organization[] = [
     category: "Housing Rights",
     focusAreas: ["housing", "immigration", "economic"],
     engagementTypes: ["in-person", "legal", "education"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "philly-housing-action",
@@ -205,7 +223,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://philadelphiahousingaction.info",
     focusAreas: ["housing", "economic", "racial"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["Philadelphia, Pennsylvania"]
+    locations: ["Philadelphia, Pennsylvania"],
+    logo: ""
   },
   {
     id: "homeless-union",
@@ -214,7 +233,8 @@ export const housingOrganizations: Organization[] = [
     category: "Housing Rights",
     focusAreas: ["housing", "economic", "direct-democracy"],
     engagementTypes: ["in-person", "outreach", "advocacy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "movement-justice-barrio",
@@ -224,7 +244,8 @@ export const housingOrganizations: Organization[] = [
     website: "https://movementforjusticeinelbarrio.org",
     focusAreas: ["housing", "immigration", "economic"],
     engagementTypes: ["in-person", "outreach", "education"],
-    locations: ["East Harlem, New York City"]
+    locations: ["East Harlem, New York City"],
+    logo: ""
   },
   {
     id: "sf-land-trust",
@@ -234,6 +255,7 @@ export const housingOrganizations: Organization[] = [
     website: "https://sfclt.org",
     focusAreas: ["housing", "economic", "direct-democracy"],
     engagementTypes: ["education", "outreach", "training"],
-    locations: ["San Francisco, California"]
+    locations: ["San Francisco, California"],
+    logo: ""
   }
 ];

@@ -9,7 +9,8 @@ export const justiceOrganizations: Organization[] = [
     website: "https://southernersonnewground.org",
     focusAreas: ["lgbtqia", "racial", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["Southern U.S."]
+    locations: ["Southern U.S."],
+    logo: ""
   },
   {
     id: "dream-defenders",
@@ -19,7 +20,8 @@ export const justiceOrganizations: Organization[] = [
     website: "https://dreamdefenders.org",
     focusAreas: ["racial", "youth", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["Florida"]
+    locations: ["Florida"],
+    logo: ""
   },
   {
     id: "m4bl",
@@ -29,7 +31,8 @@ export const justiceOrganizations: Organization[] = [
     website: "https://m4bl.org",
     focusAreas: ["racial", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "ndlon",
@@ -39,7 +42,8 @@ export const justiceOrganizations: Organization[] = [
     website: "https://ndlon.org",
     focusAreas: ["workplace", "immigration", "community"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "roc-united",
@@ -49,6 +53,7 @@ export const justiceOrganizations: Organization[] = [
     website: "https://rocunited.org",
     focusAreas: ["workplace", "economic"],
     engagementTypes: ["in-person", "online", "outreach", "event planning"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   }
 ];

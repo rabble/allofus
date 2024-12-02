@@ -28,7 +28,8 @@ export const youthOrganizations: Organization[] = [
     website: "https://acespace.org",
     focusAreas: ["climate", "youth", "education"],
     engagementTypes: ["online", "education", "training", "messaging"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "march-for-our-lives",
@@ -38,7 +39,8 @@ export const youthOrganizations: Organization[] = [
     website: "https://marchforourlives.com",
     focusAreas: ["youth", "direct-democracy", "racial"],
     engagementTypes: ["in-person", "online", "advocacy", "education", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "ssdp",
@@ -48,7 +50,8 @@ export const youthOrganizations: Organization[] = [
     website: "https://ssdp.org",
     focusAreas: ["youth", "direct-democracy", "racial"],
     engagementTypes: ["in-person", "online", "education", "advocacy", "outreach"],
-    locations: ["International"]
+    locations: ["International"],
+    logo: ""
   },
   {
     id: "girls-who-code",
@@ -58,7 +61,8 @@ export const youthOrganizations: Organization[] = [
     website: "https://girlswhocode.com",
     focusAreas: ["youth", "feminism", "education"],
     engagementTypes: ["in-person", "education", "training", "online"],
-    locations: ["National", "International"]
+    locations: ["National", "International"],
+    logo: ""
   },
   {
     id: "826-national",
@@ -68,7 +72,8 @@ export const youthOrganizations: Organization[] = [
     website: "https://826national.org",
     focusAreas: ["youth", "education"],
     engagementTypes: ["in-person", "education", "training", "outreach"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   },
   {
     id: "youthbuild",
@@ -78,7 +83,8 @@ export const youthOrganizations: Organization[] = [
     website: "https://youthbuild.org",
     focusAreas: ["youth", "economic", "education"],
     engagementTypes: ["in-person", "education", "training", "direct service"],
-    locations: ["National", "International"]
+    locations: ["National", "International"],
+    logo: ""
   },
   {
     id: "generation-citizen",
@@ -88,6 +94,7 @@ export const youthOrganizations: Organization[] = [
     website: "https://generationcitizen.org",
     focusAreas: ["youth", "direct-democracy", "education"],
     engagementTypes: ["in-person", "education", "training", "outreach", "advocacy"],
-    locations: ["National"]
+    locations: ["National"],
+    logo: ""
   }
 ];
