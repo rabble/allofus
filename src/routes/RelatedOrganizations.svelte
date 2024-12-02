@@ -23,17 +23,13 @@
   }
 
   function findRelatedOrganizations(currentOrgId: string) {
-    if (!organization) return [];
     return organizations
       .filter(org => org.id !== currentOrgId)
       .map(org => {
-        const commonFocusAreas = org.focusAreas.filter(area => organization.focusAreas.includes(area)).length;
         const commonEngagementTypes = org.engagementTypes.filter(type => organization.engagementTypes.includes(type)).length;
-        const similarityScore = commonFocusAreas + commonEngagementTypes;
-        return { ...org, similarityScore };
+        return { ...org, similarityScore: commonEngagementTypes };
       })
-      .sort((a, b) => b.similarityScore - a.similarityScore)
-      .slice(0, 50); // Show more organizations on the dedicated page
+      .sort((a, b) => b.similarityScore - a.similarityScore);
   }
 </script>
 

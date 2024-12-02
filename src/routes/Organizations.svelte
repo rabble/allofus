@@ -8,9 +8,13 @@
   import { writable } from 'svelte/store';
   import type { Organization } from '../lib/data/types';
 
+  interface EngagementType {
+    value: string;
+  }
+
   // Stores for selected focus areas and engagement types
   const selectedFocusAreas = writable<string[]>([]);
-  const selectedEngagementTypes = writable<string[]>([]);
+  const selectedEngagementTypes = writable<EngagementType[]>([]);
 
   // Initialize filters from URL when component mounts
   onMount(() => {
@@ -26,15 +30,15 @@
     const focusAreas = $selectedFocusAreas || [];
     const engagementTypes = $selectedEngagementTypes || [];
 
-    console.log('Search Filters:', filters);
-    console.log('Selected Focus Areas:', focusAreas);
-    console.log('Selected Engagement Types:', engagementTypes);
+    //console.log('Search Filters:', filters);
+    //console.log('Selected Focus Areas:', focusAreas);
+    //console.log('Selected Engagement Types:', engagementTypes);
 
     const isFilterEmpty = !filters.location && focusAreas.length === 0 && engagementTypes.length === 0;
 
     filteredOrgs = isFilterEmpty ? organizations : organizations.filter(org => {
       const searchTerm = (filters.location || '').toLowerCase();
-      console.log('Current Organization:', org.name);
+      //console.log('Current Organization:', org.name);
 
       const locationMatch = !searchTerm || 
         org.locations.some(loc => loc.toLowerCase().includes(searchTerm));
@@ -42,8 +46,8 @@
         org.name.toLowerCase().includes(searchTerm);
       const descriptionMatch = !searchTerm || 
         org.description.toLowerCase().includes(searchTerm);
-      console.log('Organization Focus Areas:', org.focusAreas);
-      console.log('Selected Focus Areas:', focusAreas);
+      //console.log('Organization Focus Areas:', org.focusAreas);
+      //console.log('Selected Focus Areas:', focusAreas);
 
       const focusAreaMatch = focusAreas.every(area => {
         return org.focusAreas.some(orgArea => 
@@ -51,10 +55,12 @@
         );
       });
 
-      console.log('Focus Area Match:', focusAreaMatch);
+      //console.log('Focus Area Match:', focusAreaMatch);
 
-      const engagementMatch = engagementTypes.every(type => 
-        org.engagementTypes.includes(type)
+      const engagementMatch = engagementTypes.every(engagementType => 
+        org.engagementTypes.some(orgType => 
+          orgType.toLowerCase() === engagementType.value.toLowerCase()
+        )
       );
 
       console.log('Matches:', { locationMatch, nameMatch, descriptionMatch, focusAreaMatch, engagementMatch });
@@ -62,7 +68,7 @@
       return (locationMatch || nameMatch || descriptionMatch) && focusAreaMatch && engagementMatch;
     });
 
-    console.log('Filtered Organizations:', filteredOrgs);
+    //console.log('Filtered Organizations:', filteredOrgs);
   }
 </script>
 
