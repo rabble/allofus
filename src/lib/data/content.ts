@@ -1,15 +1,8 @@
-import type { Announcement, Report } from '../types/content';
+import type { SocialPost, Report } from '../types/content';
+import { socialPosts } from './socialContent';
 
-export const announcements: Announcement[] = [
-  {
-    id: '1',
-    organizationId: 'org1',
-    content: 'Join us for our upcoming rally this Saturday!',
-    date: '2024-03-15',
-    link: 'https://example.com/rally'
-  },
-  // Add more sample announcements...
-];
+// Export social posts as announcements for backward compatibility
+export const announcements: SocialPost[] = socialPosts;
 
 export const reports: Report[] = [
   {

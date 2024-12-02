@@ -13,6 +13,7 @@
   import RelatedOrganizations from "./routes/RelatedOrganizations.svelte";
   import Announcements from "./routes/Announcements.svelte";
   import Reports from "./routes/Reports.svelte";
+  import ReportDetails from "./routes/ReportDetails.svelte";
   
   export let url = "";
 </script>
@@ -27,6 +28,9 @@
         <Route path="/organizations" component={Organizations} />
         <Route path="/announcements" component={Announcements} />
         <Route path="/reports" component={Reports} />
+        <Route path="/reports/:id" let:params>
+          <ReportDetails id={params.id} />
+        </Route>
         <Route path="/organizations/:id" let:params>
           <OrganizationDetails id={params.id} />
         </Route>

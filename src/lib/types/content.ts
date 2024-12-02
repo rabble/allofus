@@ -1,9 +1,15 @@
-export interface Announcement {
+export interface SocialPost {
   id: string;
   organizationId: string;
+  platform: 'twitter' | 'threads' | 'bluesky';
   content: string;
   date: string;
-  link?: string;
+  originalUrl: string;
+  authorHandle: string;
+}
+
+export interface Announcement extends SocialPost {
+  type: 'announcement';
 }
 
 export interface Report {

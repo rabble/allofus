@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { reports } from '../lib/data/content';
+  import { reports } from '../lib/data/reportsContent';
   import ReportsList from '../lib/components/content/ReportsList.svelte';
   import { Link } from 'svelte-routing';
   
@@ -17,7 +17,7 @@
 
   <div class="bg-white shadow-lg rounded-lg p-8">
     <p class="text-gray-600 mb-8">
-      Read detailed reports, analysis, and insights from organizations in our network.
+      Read detailed reports, newsletters, blogs, and articles from organizations in our network.
     </p>
 
     {#if sortedReports.length > 0}
