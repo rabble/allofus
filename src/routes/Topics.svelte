@@ -39,12 +39,27 @@
     {#each activeFocusAreas as area}
       <Link 
         to={`/focus-areas/${area.id}`}
-        class="block bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
+        class="relative block bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
       >
-        <h3 class="text-xl font-semibold text-primary mb-2">{area.title}</h3>
-        <p class="text-gray-600 mb-4">
-          {focusAreaCounts[area.id]} {focusAreaCounts[area.id] === 1 ? 'organization' : 'organizations'} working in this area
+
+      <div>
+        <div  class="flex justify-between items-center">
+        <h3 class="text-xl font-semibold text-primary mb-1">{area.title}</h3>
+        <br>
+        <p class="text-gray-600">
+        {focusAreaCounts[area.id]} {focusAreaCounts[area.id] === 1 ? 'organization' : 'organizations'}
         </p>
+        </div>
+        <img
+        src={area.iconUrl}
+        alt="{area.title} Icon"
+        class="ml-4 h-full"
+        />
+        </div>
+
+        <hr class="my-4 border-gray-300" />
+
+        <p class="text-gray-700 mb-4">{area.description}</p>
         <span class="text-secondary hover:text-primary transition-colors">
           Learn more →
         </span>

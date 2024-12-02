@@ -16,6 +16,12 @@
   import ReportDetails from "./routes/ReportDetails.svelte";
   
   export let url = "";
+
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    document.title = "All of US Directory";
+  });
 </script>
 
 <ErrorBoundary>

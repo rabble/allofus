@@ -12,42 +12,34 @@
     value: string;
   }
 
-  // Stores for selected focus areas and engagement types
+  // Stores for selected focus areas, engagement types, and location
   const selectedFocusAreas = writable<string[]>([]);
   const selectedEngagementTypes = writable<EngagementType[]>([]);
+  const location = writable<string>('');
 
   // Initialize filters from URL when component mounts
   onMount(() => {
     initializeFromUrl();
-    console.log('Initialized from URL:', $searchFilters);
   });
 
   let filteredOrgs: Organization[] = [];
 
   $: {
-    // Add guard clauses to prevent accessing properties of undefined
     const filters = $searchFilters || { location: '', focusArea: '', engagementType: '' };
     const focusAreas = $selectedFocusAreas || [];
     const engagementTypes = $selectedEngagementTypes || [];
+    const searchLocation = $location || '';
 
-    //console.log('Search Filters:', filters);
-    //console.log('Selected Focus Areas:', focusAreas);
-    //console.log('Selected Engagement Types:', engagementTypes);
-
-    const isFilterEmpty = !filters.location && focusAreas.length === 0 && engagementTypes.length === 0;
+    const isFilterEmpty = !filters.location && focusAreas.length === 0 && engagementTypes.length === 0 && !searchLocation;
 
     filteredOrgs = isFilterEmpty ? organizations : organizations.filter(org => {
-      const searchTerm = (filters.location || '').toLowerCase();
-      //console.log('Current Organization:', org.name);
-
+      const searchTerm = (filters.location || searchLocation).toLowerCase();
       const locationMatch = !searchTerm || 
         org.locations.some(loc => loc.toLowerCase().includes(searchTerm));
       const nameMatch = !searchTerm || 
         org.name.toLowerCase().includes(searchTerm);
       const descriptionMatch = !searchTerm || 
         org.description.toLowerCase().includes(searchTerm);
-      //console.log('Organization Focus Areas:', org.focusAreas);
-      //console.log('Selected Focus Areas:', focusAreas);
 
       const focusAreaMatch = focusAreas.every(area => {
         return org.focusAreas.some(orgArea => 
@@ -55,20 +47,14 @@
         );
       });
 
-      //console.log('Focus Area Match:', focusAreaMatch);
-
       const engagementMatch = engagementTypes.every(engagementType => 
         org.engagementTypes.some(orgType => 
           orgType.toLowerCase() === engagementType.value.toLowerCase()
         )
       );
 
-      console.log('Matches:', { locationMatch, nameMatch, descriptionMatch, focusAreaMatch, engagementMatch });
-
       return (locationMatch || nameMatch || descriptionMatch) && focusAreaMatch && engagementMatch;
     });
-
-    //console.log('Filtered Organizations:', filteredOrgs);
   }
 </script>
 
@@ -78,6 +64,7 @@
   <SearchContainer
     selectedFocusAreas={selectedFocusAreas}
     selectedEngagementTypes={selectedEngagementTypes}
+    location={location}
   />
   
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">

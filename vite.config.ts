@@ -7,4 +7,13 @@ export default defineConfig({
   build: {
     sourcemap: true, // Enable source maps
   },
+  server: {
+    fs: {
+      allow: [
+        './src', // Example: Allow access to the src directory
+        './public', // Example: Allow access to the public directory
+        // Add more paths as needed
+      ]
+    }
+  }
 })
