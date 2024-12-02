@@ -25,9 +25,9 @@ function createUrlParamsStore() {
 export const urlParams = createUrlParamsStore();
 
 // Debounce function to limit the frequency of URL updates
-function debounce(func, wait) {
-  let timeout;
-  return function(...args) {
+function debounce(func: (...args: any[]) => void, wait: number) {
+  let timeout: ReturnType<typeof setTimeout>;
+  return function(...args: any[]) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func.apply(this, args), wait);
   };

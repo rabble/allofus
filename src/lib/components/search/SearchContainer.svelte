@@ -3,16 +3,15 @@
   import { focusAreas, engagementTypes } from '../../data/options';
   import type { Writable } from 'svelte/store';
 
-  export let selectedFocusAreas: string[] = [];
-  export let selectedEngagementTypes: string[] = [];
+  export let selectedFocusAreas: Writable<string[]>;
+  export let selectedEngagementTypes: Writable<string[]>;
 </script>
 
 <div class="mb-4">
   <h3 class="text-lg font-semibold mb-2">Select Focus Areas</h3>
   <Select
     items={focusAreas}
-    value={selectedFocusAreas}
-    on:change={e => selectedFocusAreas = e.detail}
+    bind:value={$selectedFocusAreas}
     multiple={true}
     label="label"
     placeholder="Select focus areas"
@@ -23,8 +22,7 @@
   <h3 class="text-lg font-semibold mb-2">Select Engagement Types</h3>
   <Select
     items={engagementTypes}
-    value={selectedEngagementTypes}
-    on:change={e => selectedEngagementTypes = e.detail}
+    bind:value={$selectedEngagementTypes}
     multiple={true}
     label="label"
     placeholder="Select engagement types"
