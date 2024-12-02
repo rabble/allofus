@@ -21,7 +21,7 @@
         </span>
       </div>
       {#if org.logo}
-        <img src={org.logo} alt={`${org.name} logo`} class="h-12 w-12 object-contain" />
+        <img src={org.logo} alt={`${org.name} logo`} class="max-h-27 max-w-27 object-contain" />
       {/if}
     </div>
 

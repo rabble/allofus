@@ -7,6 +7,12 @@
     All of US: A Directory To Use To Connect, Care, and Build
   </h1>
 
+  <!--
+  <div class="flex justify-center mb-8">
+    <img src="/assets/in_solidarity_mural.jpg" alt="In Solidarity Mural" class="rounded-lg shadow-lg max-w-full h-auto" />
+  </div>
+  -->
+
   <div class="prose max-w-none">
     <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
       <p class="text-lg mb-6">
