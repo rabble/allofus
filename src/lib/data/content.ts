@@ -26,7 +26,7 @@ export const reports: Report[] = [
 
     This year, we launched several initiatives aimed at increasing political participation and representation for Latinx communities. Our workshops and events have provided valuable resources and support, fostering a sense of unity and strength. We remain dedicated to building a movement that uplifts and empowers Latinx voices.`,
     date: '2024-11-22',
-    image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmijente.net%2Fblog%2Flatinx-study-attitudes-on-policing-and-safety%2F&psig=AOvVaw2NyS7xWK75aHDABHMMoYwQ&ust=1733220585648000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwi8oe_764iKAxWeyjgGHfl2G1MQjRx6BAgAEBc',
+    image: 'https://mijente.net/wp-content/uploads/2024/06/2.png',
     link: 'https://example.com/latinx-empowerment-report'
   },
   {
@@ -38,7 +38,8 @@ export const reports: Report[] = [
 
     This year, we have successfully advocated for policy changes that improve working conditions and wages for domestic workers. Our outreach programs have provided essential resources and support, empowering workers to stand up for their rights. We are committed to creating a fair and just environment for all domestic workers.`,
     date: '2024-11-23',
-    image: 'https://www.google.com/imgres?q=omestic%20Workers%20Rights%20Report%202024&imgurl=http%3A%2F%2Fsweepsouth.com%2Fwp-content%2Fuploads%2F2024%2F08%2FInfographic-1-1024x1024.png&imgrefurl=https%3A%2F%2Fsweepsouth.com%2Fblog%2F7th-annual-domestic-workers-report-on-pay-and-working-conditions-for-domestic-workers-in-south-africa%2F&docid=uK2ZKmpp07SZWM&tbnid=i-X49tESSqrpqM&vet=12ahUKEwjFkPmF7IiKAxUzimMGHWWnFQUQM3oECBcQAA..i&w=1024&h=1024&hcb=2&ved=2ahUKEwjFkPmF7IiKAxUzimMGHWWnFQUQM3oECBcQAA',
+    image: 'https://images.squarespace-cdn.com/content/v1/5fa48611e8c1e35b60fa89a7/91580cdd-05e5-4423-8878-a04596474eaf/2024+Q2+hours.png?format=2500w',
+
     link: 'https://example.com/domestic-workers-report'
   },
   {

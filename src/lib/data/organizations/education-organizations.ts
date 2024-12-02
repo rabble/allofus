@@ -174,7 +174,7 @@ export const educationOrganizations: Organization[] = [
     focusAreas: ["education", "racial", "direct-democracy"],
     engagementTypes: ["education", "policy", "outreach"],
     locations: ["National"],
-    logo: ""
+    logo: "https://blacklivesmatter.com/wp-content/themes/blm24/assets/images/logo-frontpage.svg?v=20240530"
   },
   {
     id: "student-debt-crisis",

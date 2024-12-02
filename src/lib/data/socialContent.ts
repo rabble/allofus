@@ -38,7 +38,7 @@ export const socialPosts: SocialPost[] = [
     summary: 'Advocate for the rights of domestic workers.',
     content: 'Join our campaign to bring respect and recognition to domestic workers.',
     date: '2024-11-23',
-    image: 'https://example.com/domestic-workers.jpg',
+    image: 'https://www.google.com/imgres?q=omestic%20Workers%20Rights%20Report%202024&imgurl=http%3A%2F%2Fsweepsouth.com%2Fwp-content%2Fuploads%2F2024%2F08%2FInfographic-1-1024x1024.png&imgrefurl=https%3A%2F%2Fsweepsouth.com%2Fblog%2F7th-annual-domestic-workers-report-on-pay-and-working-conditions-for-domestic-workers-in-south-africa%2F&docid=uK2ZKmpp07SZWM&tbnid=i-X49tESSqrpqM&vet=12ahUKEwjFkPmF7IiKAxUzimMGHWWnFQUQM3oECBcQAA..i&w=1024&h=1024&hcb=2&ved=2ahUKEwjFkPmF7IiKAxUzimMGHWWnFQUQM3oECBcQAA',
     link: 'https://example.com/domestic-workers'
   },
   {
