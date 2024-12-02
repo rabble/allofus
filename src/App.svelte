@@ -10,6 +10,9 @@
   import GetInvolved from "./routes/GetInvolved.svelte";
   import ErrorBoundary from "./lib/components/shared/ErrorBoundary.svelte";
   import About from "./routes/About.svelte";
+  import RelatedOrganizations from "./routes/RelatedOrganizations.svelte";
+  import Announcements from "./routes/Announcements.svelte";
+  import Reports from "./routes/Reports.svelte";
   
   export let url = "";
 </script>
@@ -22,8 +25,13 @@
       <main class="container mx-auto px-4 py-8">
         <Route path="/" component={Welcome} />
         <Route path="/organizations" component={Organizations} />
+        <Route path="/announcements" component={Announcements} />
+        <Route path="/reports" component={Reports} />
         <Route path="/organizations/:id" let:params>
           <OrganizationDetails id={params.id} />
+        </Route>
+        <Route path="/organizations/:id/related" let:params>
+          <RelatedOrganizations id={params.id} />
         </Route>
         <Route path="/focus-areas/:id" let:params>
           <FocusArea id={params.id} />

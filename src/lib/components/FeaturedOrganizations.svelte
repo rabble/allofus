@@ -10,7 +10,7 @@
 </script>
 
 <section class="mt-12">
-  <h2 class="text-2xl font-bold text-primary mb-6">Featured Organizations</h2>
+  <h2 class="text-2xl font-bold text-primary mb-6">A few regularly updated organizations</h2>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
     {#each featuredOrgs as org (org.id)}
