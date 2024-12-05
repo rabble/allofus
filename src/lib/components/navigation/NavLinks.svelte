@@ -1,5 +1,6 @@
 <script lang="ts">
   import NavLink from './NavLink.svelte';
+  import LoginButton from '../LoginButton.svelte';
 </script>
 
 <div class="space-x-6">

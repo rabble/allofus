@@ -17,7 +17,9 @@
   import Dashboard from "./routes/admin/Dashboard.svelte";
   import EditOrganization from "./routes/admin/EditOrganization.svelte";
   import AddOrganization from "./routes/AddOrganization.svelte";
-  
+  import { loginWithNostr } from './lib/utils/nostrLogin';
+  import Footer from "./lib/components/navigation/Footer.svelte";
+
   export let url = "";
 
   import { onMount } from 'svelte';
@@ -25,14 +27,19 @@
   onMount(() => {
     document.title = "All of US Directory";
   });
+
+  const handleLogin = () => {
+    const publicKey = loginWithNostr();
+    console.log('Logged in with Nostr, public key:', publicKey);
+  };
 </script>
 
 <ErrorBoundary>
   <Router {url}>
-    <div class="min-h-screen">
+    <div class="min-h-screen flex flex-col">
       <Header />
       
-      <main class="container mx-auto px-4 py-8">
+      <main class="container mx-auto px-4 py-8 flex-grow">
         <Route path="/" component={Welcome} />
         <Route path="/organizations" component={Organizations} />
         <Route path="/announcements" component={Announcements} />
@@ -58,6 +65,8 @@
         <Route path="/admin/dashboard" component={Dashboard} />
         <Route path="/admin/add-organization" component={AddOrganization} />
       </main>
+
+      <Footer />
     </div>
   </Router>
 </ErrorBoundary>
