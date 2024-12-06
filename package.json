@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "nostr-tools": "^2.10.4",
+    "pnpm": "^9.14.4",
     "svelte-routing": "^2.13.0",
     "svelte-select": "^5.8.3",
     "svelte-spa-router": "^4.0.1"
