@@ -37,7 +37,7 @@ export const youthOrganizations: Organization[] = [
     description: "A youth-led movement advocating for gun violence prevention and safer communities through policy change and civic engagement.",
     category: "Youth Empowerment",
     website: "https://marchforourlives.com",
-    focusAreas: ["youth", "direct-democracy", "racial"],
+    focusAreas: ["youth", "democracy", "racial"],
     engagementTypes: ["in-person", "online", "advocacy", "education", "outreach"],
     locations: ["National"],
     logo: ""
@@ -48,7 +48,7 @@ export const youthOrganizations: Organization[] = [
     description: "An international network of students dedicated to ending the war on drugs and creating sensible drug policies through education and activism.",
     category: "Youth Empowerment",
     website: "https://ssdp.org",
-    focusAreas: ["youth", "direct-democracy", "racial"],
+    focusAreas: ["youth", "democracy", "racial"],
     engagementTypes: ["in-person", "online", "education", "advocacy", "outreach"],
     locations: ["International"],
     logo: ""
@@ -92,7 +92,7 @@ export const youthOrganizations: Organization[] = [
     description: "Empowers young people to become engaged and effective citizens by providing them with civic education and action-based learning.",
     category: "Youth Empowerment",
     website: "https://generationcitizen.org",
-    focusAreas: ["youth", "direct-democracy", "education"],
+    focusAreas: ["youth", "democracy", "education"],
     engagementTypes: ["in-person", "education", "training", "outreach", "advocacy"],
     locations: ["National"],
     logo: ""

@@ -7,7 +7,7 @@ export const educationOrganizations: Organization[] = [
     description: "A national coalition fighting for educational justice and equity in public schools by supporting community-led initiatives and opposing privatization.",
     category: "Education",
     website: "https://reclaimourschools.org",
-    focusAreas: ["education", "racial", "economic", "direct-democracy"],
+    focusAreas: ["education", "racial", "economic", "democracy"],
     engagementTypes: ["in-person", "outreach", "education", "policy"],
     locations: ["National"],
     logo: ""
@@ -29,7 +29,7 @@ export const educationOrganizations: Organization[] = [
     description: "A network of students organizing for free higher education, the cancellation of student debt, and investment in public education.",
     category: "Education",
     website: "https://studentaction.us",
-    focusAreas: ["education", "economic", "direct-democracy"],
+    focusAreas: ["education", "economic", "democracy"],
     engagementTypes: ["in-person", "online", "outreach"],
     locations: ["National"],
     logo: ""
@@ -51,7 +51,7 @@ export const educationOrganizations: Organization[] = [
     description: "A grassroots movement advocating for public education, opposing high-stakes testing, and supporting teachers' professional autonomy.",
     category: "Education",
     website: "https://saveourschoolsmarch.org",
-    focusAreas: ["education", "direct-democracy", "economic"],
+    focusAreas: ["education", "democracy", "economic"],
     engagementTypes: ["in-person", "outreach", "policy"],
     locations: ["National"],
     logo: ""
@@ -62,7 +62,7 @@ export const educationOrganizations: Organization[] = [
     description: "An organization focused on race and social justice issues in education, amplifying the voices of public school advocates of color.",
     category: "Education",
     website: "https://educolor.org",
-    focusAreas: ["education", "racial", "direct-democracy"],
+    focusAreas: ["education", "racial", "democracy"],
     engagementTypes: ["online", "education", "policy"],
     locations: ["National"],
     logo: ""
@@ -73,7 +73,7 @@ export const educationOrganizations: Organization[] = [
     description: "A national conference and network promoting transformative education practices and policies that are rooted in equity and justice.",
     category: "Education",
     website: "https://fmfp.org",
-    focusAreas: ["education", "racial", "direct-democracy"],
+    focusAreas: ["education", "racial", "democracy"],
     engagementTypes: ["in-person", "education", "networking"],
     locations: ["National"],
     logo: ""
@@ -84,7 +84,7 @@ export const educationOrganizations: Organization[] = [
     description: "A network of educators advocating for the rights of teachers and students, fighting against privatization and high-stakes testing.",
     category: "Education",
     website: "https://badassteacher.org",
-    focusAreas: ["education", "workplace", "direct-democracy"],
+    focusAreas: ["education", "workplace", "democracy"],
     engagementTypes: ["online", "policy", "education"],
     locations: ["National"],
     logo: ""
@@ -95,7 +95,7 @@ export const educationOrganizations: Organization[] = [
     description: "A student-led organization advocating for democratic education, social justice, and opposing imperialism and capitalism in educational institutions.",
     category: "Education",
     website: "https://newsds.org",
-    focusAreas: ["education", "direct-democracy", "economic"],
+    focusAreas: ["education", "democracy", "economic"],
     engagementTypes: ["in-person", "outreach", "education"],
     locations: ["National"],
     logo: ""
@@ -106,7 +106,7 @@ export const educationOrganizations: Organization[] = [
     description: "A network of teachers, community activists, and researchers working to promote social justice education and support grassroots organizing.",
     category: "Education",
     website: "https://edliberation.org",
-    focusAreas: ["education", "racial", "direct-democracy"],
+    focusAreas: ["education", "racial", "democracy"],
     engagementTypes: ["education", "networking", "community"],
     locations: ["National"],
     logo: ""
@@ -117,7 +117,7 @@ export const educationOrganizations: Organization[] = [
     description: "Provides free resources and lessons for teaching people's history in middle and high school classrooms across the country.",
     category: "Education",
     website: "https://zinnedproject.org",
-    focusAreas: ["education", "racial", "direct-democracy"],
+    focusAreas: ["education", "racial", "democracy"],
     engagementTypes: ["education", "resources", "teacher support"],
     locations: ["National"],
     logo: ""
@@ -171,7 +171,7 @@ export const educationOrganizations: Organization[] = [
     description: "A national coalition organizing for racial justice in education, promoting curriculum changes, and supporting Black students and educators.",
     category: "Education",
     website: "https://blacklivesmatteratschool.com",
-    focusAreas: ["education", "racial", "direct-democracy"],
+    focusAreas: ["education", "racial", "democracy"],
     engagementTypes: ["education", "policy", "outreach"],
     locations: ["National"],
     logo: "https://blacklivesmatter.com/wp-content/themes/blm24/assets/images/logo-frontpage.svg?v=20240530"
@@ -182,7 +182,7 @@ export const educationOrganizations: Organization[] = [
     description: "Advocates for student debt cancellation and reforms to make higher education accessible and affordable for all.",
     category: "Education",
     website: "https://studentdebtcrisis.org",
-    focusAreas: ["education", "economic", "direct-democracy"],
+    focusAreas: ["education", "economic", "democracy"],
     engagementTypes: ["policy", "online", "education"],
     locations: ["National"],
     logo: ""

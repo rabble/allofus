@@ -18,13 +18,15 @@ export type EngagementType =
   | "Fundraising"
   | "Legal"
   | "Medical"
-  | "Messaging (arts/media/graphics)"
+  | "Messaging and Narrative (arts/media/graphics)"
   | "Outreach"
   | "Participate in trainings"
   | "Research"
   | "Strike Support"
   | "Sanctuary support"
-  | "Tech support (programming, etc.)";
+  | "Tech support (programming, etc.)"
+  | "Translation"
+  | "Writing";
 
 // Use the type for the engagementTypes array
 export const engagementTypes: EngagementType[] = [
@@ -39,11 +41,13 @@ export const engagementTypes: EngagementType[] = [
   "Fundraising",
   "Legal",
   "Medical",
-  "Messaging (arts/media/graphics)",
+  "Messaging and Narrative (arts/media/graphics)",
   "Outreach",
   "Participate in trainings",
   "Research",
   "Strike Support",
   "Sanctuary support",
-  "Tech support (programming, etc.)"
+  "Tech support (programming, etc.)",
+  "Translation",
+  "Writing"
 ];

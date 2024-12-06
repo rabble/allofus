@@ -1,13 +1,9 @@
-
 <script lang="ts">
   import { writable } from 'svelte/store';
+  import { organizations as allOrganizations } from '$lib/data/organizations';
 
-  // Sample data for demonstration
-  const organizations = writable([
-    { id: '1', name: 'Org One', visible: true },
-    { id: '2', name: 'Org Two', visible: false },
-    { id: '3', name: 'Org Three', visible: true }
-  ]);
+  // Convert the imported organizations to a writable store for reactivity
+  const organizations = writable(allOrganizations);
 
   const newSubmissions = writable([
     { id: '4', name: 'New Org One' },

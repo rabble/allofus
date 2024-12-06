@@ -7,7 +7,7 @@ export const housingOrganizations: Organization[] = [
     description: "A national alliance of racial, economic, and environmental justice organizations building a united response to gentrification and displacement.",
     category: "Housing Rights",
     website: "https://righttothecity.org",
-    focusAreas: ["housing", "racial", "economic", "direct-democracy"],
+    focusAreas: ["housing", "racial", "economic", "democracy"],
     engagementTypes: ["in-person", "outreach", "event planning"],
     locations: ["National"],
     "staff": {
@@ -47,7 +47,7 @@ export const housingOrganizations: Organization[] = [
     description: "Works with community groups to build a new economy that works for all, focusing on economic justice and cooperative development, including housing co-ops.",
     category: "Economic Justice",
     website: "https://neweconomynyc.org",
-    focusAreas: ["housing", "economic", "direct-democracy"],
+    focusAreas: ["housing", "economic", "democracy"],
     engagementTypes: ["outreach", "education", "legal"],
     locations: ["New York City"],
     logo: ""
@@ -113,7 +113,7 @@ export const housingOrganizations: Organization[] = [
     description: "Promotes cooperative housing as a means to provide affordable housing and empower residents through collective ownership.",
     category: "Housing Rights",
     website: "https://housinginternational.coop",
-    focusAreas: ["housing", "economic", "direct-democracy"],
+    focusAreas: ["housing", "economic", "democracy"],
     engagementTypes: ["education", "training", "outreach"],
     locations: ["International"],
     logo: ""
@@ -168,7 +168,7 @@ export const housingOrganizations: Organization[] = [
     description: "A cooperative model that enables community ownership of land and housing to prevent displacement and build collective wealth.",
     category: "Housing Rights",
     website: "https://ebprec.org",
-    focusAreas: ["housing", "economic", "direct-democracy"],
+    focusAreas: ["housing", "economic", "democracy"],
     engagementTypes: ["education", "outreach", "training"],
     locations: ["Oakland, California"],
     logo: ""
@@ -190,7 +190,7 @@ export const housingOrganizations: Organization[] = [
     description: "Promotes community land trusts in NYC to create permanently affordable housing and community spaces.",
     category: "Housing Rights",
     website: "https://nyccli.org",
-    focusAreas: ["housing", "economic", "direct-democracy"],
+    focusAreas: ["housing", "economic", "democracy"],
     engagementTypes: ["education", "training", "outreach"],
     locations: ["New York City"],
     logo: ""
@@ -231,7 +231,7 @@ export const housingOrganizations: Organization[] = [
     name: "The National Homeless Union",
     description: "Advocates for the rights of homeless individuals, organizing for access to housing and resources.",
     category: "Housing Rights",
-    focusAreas: ["housing", "economic", "direct-democracy"],
+    focusAreas: ["housing", "economic", "democracy"],
     engagementTypes: ["in-person", "outreach", "advocacy"],
     locations: ["National"],
     logo: ""
@@ -253,7 +253,7 @@ export const housingOrganizations: Organization[] = [
     description: "Creates permanently affordable, resident-owned housing for low- to moderate-income residents in San Francisco.",
     category: "Housing Rights",
     website: "https://sfclt.org",
-    focusAreas: ["housing", "economic", "direct-democracy"],
+    focusAreas: ["housing", "economic", "democracy"],
     engagementTypes: ["education", "outreach", "training"],
     locations: ["San Francisco, California"],
     logo: ""

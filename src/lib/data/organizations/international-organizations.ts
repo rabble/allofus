@@ -73,7 +73,7 @@ export const internationalOrganizations: Organization[] = [
     description: "Campaigns against global inequality and injustice, focusing on issues like trade, debt, and corporate power.",
     category: "International Solidarity",
     website: "https://globaljustice.org.uk",
-    focusAreas: ["international", "economic", "climate", "direct-democracy"],
+    focusAreas: ["international", "economic", "climate", "democracy"],
     engagementTypes: ["in-person", "policy", "education", "online"],
     locations: ["United Kingdom", "International"],
     logo: ""
@@ -84,7 +84,7 @@ export const internationalOrganizations: Organization[] = [
     description: "Supports people using video and technology to protect and defend human rights globally.",
     category: "International Solidarity",
     website: "https://witness.org",
-    focusAreas: ["international", "direct-democracy"],
+    focusAreas: ["international", "democracy"],
     engagementTypes: ["education", "training", "tech support"],
     locations: ["Brooklyn, New York", "International"],
     logo: ""
@@ -106,7 +106,7 @@ export const internationalOrganizations: Organization[] = [
     description: "Works globally to advance social justice through research, advocacy, and collaboration with grassroots movements.",
     category: "International Solidarity",
     website: "https://democracyctr.org",
-    focusAreas: ["international", "climate", "economic", "direct-democracy"],
+    focusAreas: ["international", "climate", "economic", "democracy"],
     engagementTypes: ["research", "education", "advocacy"],
     locations: ["San Francisco, California", "Cochabamba, Bolivia"],
     logo: ""
@@ -150,7 +150,7 @@ export const internationalOrganizations: Organization[] = [
     description: "Works to close the U.S. Army School of the Americas and change oppressive U.S. foreign policy in Latin America.",
     category: "International Solidarity",
     website: "https://soaw.org",
-    focusAreas: ["international", "direct-democracy"],
+    focusAreas: ["international", "democracy"],
     engagementTypes: ["in-person", "education", "advocacy", "online"],
     locations: ["Washington, D.C.", "U.S.-Latin America border"],
     logo: ""
