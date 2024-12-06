@@ -15,14 +15,14 @@ export default defineConfig({
         './public', // Example: Allow access to the public directory
         './node_modules/vite/dist/client',
         './node_modules/svelte-hmr/runtime',
-        './node_modules/.pnpm',
+        //'./node_modules/.pnpm',
         // Add more paths as needed
       ]
     }
   },
   resolve: {
     alias: {
-      '@welshman/client': path.resolve(__dirname, 'welshman/packages/app/src'),
+      //'@welshman/client': path.resolve(__dirname, 'welshman/packages/app/src'),
     },
   }
 })
