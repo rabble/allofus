@@ -22,14 +22,6 @@
     "vite": "^5.4.11"
   },
   "dependencies": {
-    "@welshman/app": "^0.0.31",
-    "@welshman/content": "^0.0.12",
-    "@welshman/feeds": "^0.0.26",
-    "@welshman/lib": "^0.0.28",
-    "@welshman/net": "^0.0.39",
-    "@welshman/signer": "^0.0.16",
-    "@welshman/store": "^0.0.12",
-    "@welshman/util": "^0.0.46",
     "nostr-tools": "^2.10.4",
     "svelte-routing": "^2.13.0",
     "svelte-select": "^5.8.3",

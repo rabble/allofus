@@ -1,3 +1,4 @@
+<!--
 <script lang="ts">
   import { addSession, dropSession, getSession } from '@welshman/app';
   import { Nip01Signer, makeSecret } from '@welshman/signer';
@@ -35,3 +36,4 @@
 <button class="bg-blue-500 text-white p-2 rounded" on:click={handleLogin}>
   Login
 </button>
+-->

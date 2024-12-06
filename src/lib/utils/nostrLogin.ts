@@ -1,12 +1,12 @@
-import { Connection, subscribe } from '@welshman/net';
+//import { Connection, subscribe } from '@welshman/net';
 import { userProfile } from '../stores/authStore';
-import { tryCatch } from '@welshman/lib';
+//import { tryCatch } from '@welshman/lib';
 
 const relays = [
   'wss://relay.damus.io',
   'wss://relay.nos.social', // Add more relays as needed
 ];
-
+/*
 export const loginWithNostr = async (publicKey: string) => {
   return await tryCatch(async () => {
     // Create a new connection instance
@@ -40,4 +40,4 @@ export const loginWithNostr = async (publicKey: string) => {
       console.error('Failed to fetch user profile:', error);
     }
   });
-}; 
+}; */
