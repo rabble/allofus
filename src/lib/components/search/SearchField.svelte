@@ -1,9 +1,13 @@
 <script lang="ts">
-  export let label: string;
-  export let id: string;
-  export let value: string;
-  export let placeholder: string = "";
-  export let type: "text" | "select" = "text";
+  interface Props {
+    label: string;
+    id: string;
+    value: string;
+    placeholder?: string;
+    type?: "text" | "select";
+  }
+
+  let { label, id, value, placeholder = "", type = "text" }: Props = $props();
 </script>
 
 <div>

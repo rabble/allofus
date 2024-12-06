@@ -55,12 +55,22 @@
       <p class="mb-6">
         Your involvement matters. Together, we can create a ripple effect that leads to lasting, positive change. Join us on this journey, and let's shape the world we want to see.
       </p>
-      <Link 
-        to="/organizations" 
-        class="inline-block bg-white text-secondary hover:bg-gray-100 px-6 py-3 rounded-md transition-colors"
-      >
-        Browse the Directory Now
-      </Link>
+      <div class="flex space-x-4">
+        <Link 
+          to="/organizations" 
+          class="inline-block bg-white text-secondary hover:bg-gray-100 px-6 py-3 rounded-md transition-colors"
+          aria-label="Browse the Directory"
+        >
+          Browse the Directory Now
+        </Link>
+        <Link 
+          to="/signup" 
+          class="inline-block bg-white text-secondary hover:bg-gray-100 px-6 py-3 rounded-md transition-colors"
+          aria-label="Sign up for the Mailing List"
+        >
+          Sign Up for Mailing List
+        </Link>
+      </div>
     </div>
 
     <p class="text-xl font-bold text-center">

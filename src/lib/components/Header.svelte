@@ -11,6 +11,14 @@
         <span class="text-2xl font-bold">All of US Directory</span>
       </Link>
       <NavLinks />
+      <a 
+        href="https://your-mailerlite-signup-form-link.com" 
+        class="hover:underline"
+        aria-label="Sign up for our mailing list"
+        tabindex="0"
+      >
+        Join Our Mailing List
+      </a>
     </div>
   </nav>
 </header>

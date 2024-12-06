@@ -3,7 +3,7 @@
   import SearchField from './SearchField.svelte';
   import { engagementTypes, focusAreas } from '../../data/options';
   import { focusAreaContents } from '../../data/focusAreaContent';
-  import { navigate, Link } from 'svelte-routing';
+  import { navigate } from 'svelte-routing';
 
   const sortedFocusAreas = focusAreas.sort((a, b) => {
     const areaA = focusAreaContents.find(f => f.id === a.value);
@@ -18,6 +18,7 @@
       return 0;
     }
   });
+
 
   function handleSubmit() {
     const queryParams = new URLSearchParams();
