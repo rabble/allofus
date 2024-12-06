@@ -1,11 +1,9 @@
 <script lang="ts">
-  import { Link } from "svelte-routing";
   export let to: string;
+  export let className: string = '';
+  export let role: string = '';
 </script>
 
-<Link 
-  {to} 
-  class="hover:text-accent transition-colors duration-200"
->
-  <slot />
-</Link>
+<a href={to} class={className} role={role}>
+  <slot></slot>
+</a>

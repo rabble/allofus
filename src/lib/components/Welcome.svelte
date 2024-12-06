@@ -32,15 +32,10 @@
     Choose your location, your focus area, and the way you want to engage, and then click Search to see a list of organizations that fit your criteria. Each entry you see links to an organization page where you will learn more about the organization and projects they have and the help they need. Follow the instructions on that page for how to connect with the organization. You can search as many times as you like to find ways to aid the tasks we all face. 
   </p>
   
-  <div class="grid md:grid-cols-2 gap-6 mt-8">
-    <a href="/topics"  class="bg-blue-50 p-6 rounded-lg block text-primary hover:bg-blue-100">
-      <h2 class="text-xl font-semibold text-primary mb-3">What can I help with?</h2>
-      <p>Use your skills for positive change and learn new ones.</p>
-    </a>
-    
-    <a href="/get-involved" class="bg-blue-50 p-6 rounded-lg block text-primary hover:bg-blue-100">
-      <h2 class="text-xl font-semibold text-primary mb-3">Who can I help?</h2>
-      <p>Connect with campaigns and organizations that need your help to help your community.</p>
+  <div class="grid md:grid-cols-1 gap-6 mt-8">
+    <a href="/organizations" class="bg-blue-50 p-6 rounded-lg block text-primary hover:bg-blue-100">
+      <h2 class="text-xl font-semibold text-primary mb-3">Search Now: Get Involved</h2>
+      <p>Use your skills for positive change, learn new ones, and connect with campaigns and organizations that need your help to help your community.</p>
     </a>
   </div>
 </div>

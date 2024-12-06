@@ -10,8 +10,12 @@
   import GetInvolved from "./routes/GetInvolved.svelte";
   import ErrorBoundary from "./lib/components/shared/ErrorBoundary.svelte";
   import About from "./routes/About.svelte";
+  import Conveners from "./routes/Conveners.svelte";
+  import Testimonials from "./routes/Testimonials.svelte";
+  import Contact from "./routes/Contact.svelte";
   import RelatedOrganizations from "./routes/RelatedOrganizations.svelte";
   import Announcements from "./routes/Announcements.svelte";
+  import Feed from "./routes/Feed.svelte";
   import Reports from "./routes/Reports.svelte";
   import ReportDetails from "./routes/ReportDetails.svelte";
   import Dashboard from "./routes/admin/Dashboard.svelte";
@@ -62,6 +66,10 @@
         <Route path="/topics" component={Topics} />
         <Route path="/get-involved" component={GetInvolved} />
         <Route path="/about" component={About} />
+        <Route path="/feed" component={Feed} />
+        <Route path="/conveners" component={Conveners} />
+        <Route path="/testimonials" component={Testimonials} />
+        <Route path="/contact" component={Contact} />
         <Route path="/admin/dashboard" component={Dashboard} />
         <Route path="/admin/add-organization" component={AddOrganization} />
       </main>
