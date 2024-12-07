@@ -1,6 +1,6 @@
 [build]
   publish = "dist" # Adjust this if your build directory is different
-  command = "npm run build"
+  command = "pnpm run build"
 
 [[redirects]]
   from = "/assets/*"

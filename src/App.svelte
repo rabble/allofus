@@ -21,7 +21,7 @@
   import Dashboard from "./routes/admin/Dashboard.svelte";
   import EditOrganization from "./routes/admin/EditOrganization.svelte";
   import AddOrganization from "./routes/AddOrganization.svelte";
-  import { loginWithNostr } from './lib/utils/nostrLogin';
+  //import { loginWithNostr } from './lib/utils/nostrLogin';
   import Footer from "./lib/components/navigation/Footer.svelte";
 
   export let url = "";

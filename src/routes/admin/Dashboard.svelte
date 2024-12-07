@@ -1,6 +1,6 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
-  import { organizations as allOrganizations } from '$lib/data/organizations';
+  import { organizations as allOrganizations } from '../../lib/data/organizations';
 
   // Convert the imported organizations to a writable store for reactivity
   const organizations = writable(allOrganizations);
