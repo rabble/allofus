@@ -36,8 +36,8 @@
       <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5">
         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
           <NavLink to="/organizations" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Search</NavLink>
-          <NavLink to="/join-directory" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Apply to join the directory</NavLink>
-          <NavLink to="/manage-organization-listing" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Create / update your page</NavLink>
+          <NavLink to="/join-directory" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Add to the Directory</NavLink>
+          <NavLink to="/manage-organization-listing" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Manage Your Listing</NavLink>
         </div>
       </div>
     {/if}
