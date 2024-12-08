@@ -278,21 +278,23 @@
       </div>
     </div>
 
-    <button 
-      type="submit" 
-      class="bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-      disabled={isSubmitting}
-      aria-busy={isSubmitting}
-    >
-      {#if isSubmitting}
-        <span class="inline-block animate-spin mr-2">↻</span>
-      {/if}
-      {isSubmitting ? 'Adding Organization...' : 'Add Organization'}
-    </button>
-  </form>
+    <div class="mt-8 flex items-center gap-8">
+      <button 
+        type="submit" 
+        class="shrink-0 bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled={isSubmitting}
+        aria-busy={isSubmitting}
+      >
+        {#if isSubmitting}
+          <span class="inline-block animate-spin mr-2">↻</span>
+        {/if}
+        {isSubmitting ? 'Adding Organization...' : 'Add Organization'}
+      </button>
 
-  <p class="mt-8 text-gray-600 italic">
-    When you submit the above form it will populate your organization's unique directory page which will then be searchable by users seeking to become involved.
-  </p>
+      <p class="text-gray-600 italic">
+        When you submit the above form it will populate your organization's unique directory page which will then be searchable by users seeking to become involved.
+      </p>
+    </div>
+  </form>
 
 </div>
