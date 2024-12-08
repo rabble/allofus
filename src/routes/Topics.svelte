@@ -26,9 +26,9 @@
   <h1 class="text-4xl font-bold text-primary mb-6">Movement Topics</h1>
   
   <div class="bg-white shadow-lg rounded-lg p-8 mb-12">
-    <h2 class="text-2xl font-bold text-primary mb-4">About All of US Directory</h2>
+    <h2 class="text-2xl font-bold text-primary mb-4">About All of Us Directory</h2>
     <p class="text-lg text-gray-700 mb-6">
-      Welcome to the All of US Directory, a comprehensive resource connecting individuals with organizations working across various social justice movements. Our directory helps you discover and engage with groups making real change in communities across the country.
+      Welcome to the All of Us Directory, a comprehensive resource connecting individuals with organizations working across various social justice movements.
     </p>
     <p class="text-lg text-gray-700">
       Browse the topics below to learn more about each movement area and find organizations working on issues you care about. Whether you're looking to get involved locally or connect with national campaigns, you'll find opportunities to contribute your skills and energy to building a better world.

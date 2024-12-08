@@ -3,7 +3,9 @@
 </script>
 
 <div class="container mx-auto px-4 py-8 max-w-4xl">
-  <h1 class="text-4xl font-bold text-primary mb-8">About Us</h1>
+  <h1 class="text-4xl font-bold text-primary mb-6">
+    All of US: A Directory To Connect, Care, and Build
+  </h1>
 
   <div class="space-y-8">
     <section>
@@ -28,7 +30,7 @@
     <section>
       <h2 class="text-2xl font-bold text-primary mb-4">What Organizations Are Included In The Directory?</h2>
       <p class="text-gray-700 leading-relaxed">
-        Broadly speaking, The All Of US member groups are grassroots-friendly, progressive-leaning, non-commercial, and non-sectarian; they seek and give solidarity; they are welcoming and value participation. They are eager to reply to requests from people who want to join or to help them, and they are able to welcome and involve people who would fit well. Do you want to add your organization to the directory? <Link to="/add-organization" class="text-blue-600 hover:underline font-medium">Start here</Link>.
+        Broadly speaking, The All of Us member groups are grassroots-friendly, progressive-leaning, non-commercial, and non-sectarian; they seek and give solidarity; they are welcoming and value participation. They are eager to reply to requests from people who want to join or to help them, and they are able to welcome and involve people who would fit well. Do you want to add your organization to the directory? <Link to="/add-organization" class="text-blue-600 hover:underline font-medium">Start here</Link>.
       </p>
     </section>
 
