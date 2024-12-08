@@ -35,7 +35,7 @@
 
 <div class="container mx-auto px-4 py-8 max-w-4xl">
   <!-- Header content -->
-  <h1 class="text-3xl font-bold text-primary mb-4">Join Our Directory</h1>
+  <h1 class="text-3xl font-bold text-primary mb-4">Apply to Join the All of Us Directory</h1>
   
   <div class="mb-8">
     <h2 class="text-xl font-semibold text-gray-800 mb-4">

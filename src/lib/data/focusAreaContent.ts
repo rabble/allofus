@@ -54,7 +54,7 @@ export const focusAreaContents: FocusAreaContent[] = [
     title: "democracy",
     description: "The democracy movement works to create more direct and meaningful forms of democratic participation beyond traditional representative democracy.",
     context: "In response to growing disillusionment with traditional political systems, organizations are developing new models of democratic participation.",
-    iconUrl: "/assets/icons/democracy.png"
+    iconUrl: "/assets/icons/electoral.png"
   },
   {
     id: "disability-rights",
