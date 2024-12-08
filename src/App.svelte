@@ -22,6 +22,7 @@
   import AddOrganization from "./routes/AddOrganization.svelte";
   import Footer from "./lib/components/navigation/Footer.svelte";
   import MailingList from "./routes/MailingList.svelte";
+  import JoinDirectory from "./routes/JoinDirectory.svelte";
 
   export let url = "";
 
@@ -71,6 +72,7 @@
         <Route path="/admin/dashboard" component={Dashboard} />
         <Route path="/admin/add-organization" component={AddOrganization} />
         <Route path="/mailing-list" component={MailingList} />
+        <Route path="/join-directory" component={JoinDirectory} />
       </main>
 
       <Footer />

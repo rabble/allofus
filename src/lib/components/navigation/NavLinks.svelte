@@ -18,6 +18,7 @@
   <NavLink to="/organizations" className="text-white font-bold">Organizations</NavLink>
   <NavLink to="/topics" className="text-white font-bold">Topics</NavLink>
   <NavLink to="/feed" className="text-white font-bold">Socials</NavLink>
+  <NavLink to="/join-directory" className="text-white font-bold">Join Directory</NavLink>
   <div class="relative inline-block">
     <button 
       class="inline-flex items-center justify-center rounded-md shadow-sm px-4 py-2 text-white font-bold hover:bg-gray-700 focus:outline-none"

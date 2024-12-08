@@ -29,8 +29,11 @@
 
     <section>
       <h2 class="text-2xl font-bold text-primary mb-4">What Organizations Are Included In The Directory?</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Broadly speaking, The All of Us member groups are grassroots-friendly, progressive-leaning, non-commercial, and non-sectarian; they seek and give solidarity; they are welcoming and value participation. They are eager to reply to requests from people who want to join or to help them, and they are able to welcome and involve people who would fit well.
+      </p>
       <p class="text-gray-700 leading-relaxed">
-        Broadly speaking, The All of Us member groups are grassroots-friendly, progressive-leaning, non-commercial, and non-sectarian; they seek and give solidarity; they are welcoming and value participation. They are eager to reply to requests from people who want to join or to help them, and they are able to welcome and involve people who would fit well. Do you want to add your organization to the directory? <Link to="/add-organization" class="text-blue-600 hover:underline font-medium">Start here</Link>.
+        Want to add your organization to the directory? <Link to="/join-directory" class="text-blue-600 hover:underline font-medium">Learn about joining the directory</Link> or <Link to="/add-organization" class="text-blue-600 hover:underline font-medium">add your organization now</Link>.
       </p>
     </section>
 
