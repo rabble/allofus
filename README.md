@@ -24,6 +24,16 @@ Built with:
 - [TypeScript](https://www.typescriptlang.org/)
 - Hosted on [Netlify](https://www.netlify.com/)
 
+## Prerequisites
+
+This project requires PNPM version 9.14.4. To install the correct version:
+
+bash
+Install specific PNPM version globally
+npm install -g pnpm@9.14.4 --force
+Verify installation
+pnpm --version # Should output 9.14.4
+
 ## Development
 
 1. Clone the repository:
