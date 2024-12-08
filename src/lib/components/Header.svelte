@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Link } from "svelte-routing";
   import NavLinks from "./navigation/NavLinks.svelte";
+  import MailingListSignup from "./shared/MailingListSignup.svelte";
 </script>
 
 <header class="bg-primary text-white shadow-lg">
@@ -11,14 +12,7 @@
         <span class="text-2xl font-bold">All of US Directory</span>
       </Link>
       <NavLinks />
-      <a 
-        href="https://your-mailerlite-signup-form-link.com" 
-        class="hover:underline"
-        aria-label="Sign up for our mailing list"
-        tabindex="0"
-      >
-        Join Our Mailing List
-      </a>
+      <MailingListSignup />
     </div>
   </nav>
 </header>
