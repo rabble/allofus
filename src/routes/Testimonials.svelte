@@ -10,43 +10,43 @@
   const testimonials: Testimonial[] = [
     /*
     { 
-      name: "Alexandria Ocasio-Cortez", 
-      message: "This platform is a powerful tool for grassroots organizing and progressive change.", 
-      date: "2023-10-10", 
-      imageUrl: "https://example.com/aoc.jpg" 
+      name: "Sarah Chen", 
+      message: "All of Us helped me connect with local climate action groups. I've joined beach cleanups and am now helping organize our community's first sustainability festival!", 
+      date: "2024-02-15", 
+      imageUrl: "/images/testimonials/sarah-c.jpg" 
     },
     { 
-      name: "Bernie Sanders", 
-      message: "A future to believe in starts with platforms like this, empowering the people.", 
-      date: "2023-09-25", 
-      imageUrl: "https://example.com/bernie-sanders.jpg" 
+      name: "Marcus Rodriguez", 
+      message: "Through All of Us, I found others passionate about housing justice. We're now working together on tenant rights workshops and advocacy campaigns.", 
+      date: "2024-01-20", 
+      imageUrl: "/images/testimonials/marcus-r.jpg" 
     },
     { 
-      name: "Elizabeth Warren", 
-      message: "Fighting for the middle class means using every tool at our disposal, including this platform.", 
-      date: "2023-08-30", 
-      imageUrl: "https://example.com/elizabeth-warren.jpg" 
+      name: "Aisha Patel", 
+      message: "As a first-time activist, I wasn't sure where to start. All of Us made it easy to find local mutual aid groups. Now I help coordinate our neighborhood food distribution network.", 
+      date: "2023-12-12", 
+      imageUrl: "/images/testimonials/aisha-p.jpg" 
     },
     { 
-      name: "Ilhan Omar", 
-      message: "Together, we can build a more just and equitable society with the help of this platform.", 
-      date: "2023-07-20", 
-      imageUrl: "https://example.com/ilhan-omar.jpg" 
+      name: "Devon Williams", 
+      message: "Finding like-minded people who care about education equity was a game-changer. We're now running after-school programs in underserved communities.", 
+      date: "2023-11-05", 
+      imageUrl: "/images/testimonials/devon-w.jpg" 
     },
     { 
-      name: "Rashida Tlaib", 
-      message: "This platform is a testament to the power of the people and the strength of our movement.", 
-      date: "2023-07-05", 
-      imageUrl: "https://example.com/rashida-tlaib.jpg" 
-    },*/
-    // Add more testimonials as needed
+      name: "Lucy Martinez", 
+      message: "All of Us connected me with other healthcare workers advocating for Medicare for All. We've organized successful community health fairs and petition drives.", 
+      date: "2023-10-18", 
+      imageUrl: "/images/testimonials/lucy-m.jpg" 
+    }
+    */
   ];
 </script>
 
 <div class="container mx-auto px-4 py-8">
   <h1 class="text-4xl font-bold text-primary mb-6">Testimonials</h1>
   <p class="text-lg mb-4">
-    Hear from leaders and supporters of progressive change.
+    Comments from leaders and supporters of progressive change.
   </p>
   <div class="space-y-6">
     {#each testimonials as { name, message, date, imageUrl }}

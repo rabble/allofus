@@ -19,6 +19,7 @@
   import ReportDetails from "./routes/ReportDetails.svelte";
   import Dashboard from "./routes/admin/Dashboard.svelte";
   import EditOrganization from "./routes/admin/EditOrganization.svelte";
+  import ManageOrganizationListing from "./routes/ManageOrganizationListing.svelte";
   import AddOrganization from "./routes/AddOrganization.svelte";
   import Footer from "./lib/components/navigation/Footer.svelte";
   import MailingList from "./routes/MailingList.svelte";
@@ -70,7 +71,11 @@
         <Route path="/testimonials" component={Testimonials} />
         <Route path="/contact" component={Contact} />
         <Route path="/admin/dashboard" component={Dashboard} />
-        <Route path="/admin/add-organization" component={AddOrganization} />
+        <Route path="/admin/edit-organization/:id" let:params>
+          <EditOrganization id={params.id} />
+        </Route>
+        <Route path="/add-organization" component={AddOrganization} />
+        <Route path="/edit-organization/" component={ManageOrganizationListing} />
         <Route path="/mailing-list" component={MailingList} />
         <Route path="/join-directory" component={JoinDirectory} />
       </main>
