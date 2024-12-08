@@ -24,7 +24,8 @@
   import Footer from "./lib/components/navigation/Footer.svelte";
   import MailingList from "./routes/MailingList.svelte";
   import JoinDirectory from "./routes/JoinDirectory.svelte";
-
+  import Join from "./routes/Join.svelte";
+  
   export let url = "";
 
   import { onMount } from 'svelte';
@@ -78,6 +79,7 @@
         <Route path="/edit-organization/" component={ManageOrganizationListing} />
         <Route path="/mailing-list" component={MailingList} />
         <Route path="/join-directory" component={JoinDirectory} />
+        <Route path="/join" component={Join} />
       </main>
 
       <Footer />
