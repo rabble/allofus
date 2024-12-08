@@ -7,7 +7,6 @@
   import FocusArea from "./routes/FocusArea.svelte";
   import EngagementType from "./routes/EngagementType.svelte";
   import Topics from "./routes/Topics.svelte";
-  import GetInvolved from "./routes/GetInvolved.svelte";
   import ErrorBoundary from "./lib/components/shared/ErrorBoundary.svelte";
   import About from "./routes/About.svelte";
   import Conveners from "./routes/Conveners.svelte";
@@ -21,7 +20,6 @@
   import Dashboard from "./routes/admin/Dashboard.svelte";
   import EditOrganization from "./routes/admin/EditOrganization.svelte";
   import AddOrganization from "./routes/AddOrganization.svelte";
-  //import { loginWithNostr } from './lib/utils/nostrLogin';
   import Footer from "./lib/components/navigation/Footer.svelte";
 
   export let url = "";
@@ -64,7 +62,6 @@
           <EngagementType type={params.type} />
         </Route>
         <Route path="/topics" component={Topics} />
-        <Route path="/get-involved" component={GetInvolved} />
         <Route path="/about" component={About} />
         <Route path="/feed" component={Feed} />
         <Route path="/conveners" component={Conveners} />

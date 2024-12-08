@@ -17,7 +17,6 @@
 <div class="flex space-x-6 items-center">
   <NavLink to="/organizations" className="text-white font-bold">Organizations</NavLink>
   <NavLink to="/topics" className="text-white font-bold">Topics</NavLink>
-  <NavLink to="/get-involved" className="text-white font-bold">Get Involved</NavLink>
   <NavLink to="/feed" className="text-white font-bold">Socials</NavLink>
   <div class="relative inline-block">
     <button 
