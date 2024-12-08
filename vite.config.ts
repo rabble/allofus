@@ -10,15 +10,17 @@ export default defineConfig({
   },
   server: {
     fs: {
+      strict: false,
       allow: [
         './src', // Example: Allow access to the src directory
         './public', // Example: Allow access to the public directory
         './node_modules/vite/dist/client',
         './node_modules/svelte-hmr/runtime',
-        //'./node_modules/.pnpm',
+        './node_modules/.pnpm/svelte-hmr@0.16.0_svelte@4.2.19/node_modules/svelte-hmr/runtime'
         // Add more paths as needed
       ]
-    }
+    },
+    cors: true
   },
   resolve: {
     alias: {

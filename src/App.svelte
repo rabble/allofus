@@ -33,8 +33,8 @@
   });
 
   const handleLogin = () => {
-    const publicKey = loginWithNostr();
-    console.log('Logged in with Nostr, public key:', publicKey);
+    //const publicKey = loginWithNostr();
+    //console.log('Logged in with Nostr, public key:', publicKey);
   };
 </script>
 

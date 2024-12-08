@@ -2,17 +2,63 @@
   import { Link } from "svelte-routing";
 </script>
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-4xl font-bold text-primary mb-6">About Us</h1>
-  <p class="text-lg text-gray-700 mb-6">
-    Learn more about our mission and how you can get involved.
-  </p>
-  <a 
-    href="https://your-mailerlite-signup-form-link.com" 
-    class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors"
-    aria-label="Sign up for our mailing list"
-    tabindex="0"
-  >
-    Join Our Mailing List
-  </a>
-</div> 
+<div class="container mx-auto px-4 py-8 max-w-4xl">
+  <h1 class="text-4xl font-bold text-primary mb-8">About Us</h1>
+
+  <div class="space-y-8">
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-4">What Is Our Goal?</h2>
+      <p class="text-gray-700 leading-relaxed">
+        All of Us is designed to help people get more directly involved in progressive and left efforts throughout the U.S. confronting the MAGA program. The tool we offer can connect you with groups working on many issues as part of a larger social change movement aimed at building toward a better future for everyone.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-4">What Do We Do?</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We provide a directory designed to help people and organizations find each other. Organizations describe their work and what need they have for volunteers and new members. Individuals then search the directory to find an organization that they want to connect with, filtering for:
+      </p>
+      <ul class="list-disc list-inside text-gray-700 ml-4 space-y-2">
+        <li>location,</li>
+        <li>area of interest, and</li>
+        <li>the kinds of experience and knowledge they have to offer.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-4">What Organizations Are Included In The Directory?</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Broadly speaking, The All Of US member groups are grassroots-friendly, progressive-leaning, non-commercial, and non-sectarian; they seek and give solidarity; they are welcoming and value participation. They are eager to reply to requests from people who want to join or to help them, and they are able to welcome and involve people who would fit well. Do you want to add your organization to the directory? <Link to="/add-organization" class="text-blue-600 hover:underline font-medium">Start here</Link>.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-4">What Individuals Use the Directory?</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Anyone who wants to connect with others to address concerns about what is happening in the U.S. – whether in response to Trump or MAGA-ism or in response to the general need to improve life in our communities, stop negative policies, win positive gains, and build with others towards a better world. Do you want to try searching the database? <Link to="/organizations" class="text-blue-600 hover:underline font-medium">Start here</Link>.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-4">Who Decides What's Included?</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We want users to find what they seek. Thus we work with organizations to be forthright in presenting themselves, their aims, their values, and their allegiances for assessment via their All of US unique pages. Have questions? <Link to="/contact" class="text-blue-600 hover:underline font-medium">Contact us</Link>.
+      </p>
+    </section>
+
+    <p class="text-sm text-gray-500 italic mt-8 border-t pt-4">
+      All sects, whiners, complainers, no good counterproductive my way or the highway types—steer clear.
+    </p>
+
+    <div class="mt-8">
+      <a 
+        href="https://your-mailerlite-signup-form-link.com" 
+        class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+        aria-label="Sign up for our mailing list"
+        tabindex="0"
+      >
+        Join Our Mailing List
+      </a>
+    </div>
+  </div>
+</div>
