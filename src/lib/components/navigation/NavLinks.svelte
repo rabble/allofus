@@ -37,7 +37,7 @@
         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
           <NavLink to="/organizations" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Search</NavLink>
           <NavLink to="/join-directory" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Add to the Directory</NavLink>
-          <NavLink to="/manage-organization-listing" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Manage Your Listing</NavLink>
+          <NavLink to="/add-organization" className="block px-4 py-2 text-white font-bold hover:bg-gray-700" role="menuitem" on:click={closeDropdowns}>Manage Your Listing</NavLink>
         </div>
       </div>
     {/if}
