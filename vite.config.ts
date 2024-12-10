@@ -16,15 +16,23 @@ export default defineConfig({
         './public', // Example: Allow access to the public directory
         './node_modules/vite/dist/client',
         './node_modules/svelte-hmr/runtime',
-        './node_modules/.pnpm/svelte-hmr@0.16.0_svelte@4.2.19/node_modules/svelte-hmr/runtime'
+        './node_modules/.pnpm/svelte-hmr@0.16.0_svelte@4.2.19/node_modules/svelte-hmr/runtime',
+        './prisma'
         // Add more paths as needed
       ]
     },
-    cors: true
+    cors: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      }
+    }
   },
   resolve: {
     alias: {
       //'@welshman/client': path.resolve(__dirname, 'welshman/packages/app/src'),
+      $lib: path.resolve('./src/lib')
     },
   }
 })

@@ -1,23 +1,47 @@
 <script lang="ts">
-  import { userNpub, userProfile } from '../stores/authStore';
+  import { Link } from 'svelte-routing';
+  import { isAuthenticated } from '../../stores/authStore';
 </script>
 
-<footer class="bg-gray-800 text-white py-4">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    <div class="text-sm">
-      © 2023 All of US Directory. All rights reserved.
-    </div>
-    <div class="text-sm">
-      {#if $userNpub}
-        Logged in as: {$userNpub} | 
-        {#if $userProfile}
-          <span>Name: {$userProfile.name}</span> | 
-          <span>Email: {$userProfile.email}</span> <!-- Example fields -->
-        {/if}
-        <a href="#" on:click|preventDefault={() => userNpub.set(null)} class="hover:underline">Logout</a>
+<footer class="bg-gray-800 text-white p-4">
+  <div class="container mx-auto text-center space-y-4">
+    <div class="flex justify-center space-x-6">
+      <Link 
+        to="/mailing-list"
+        class="hover:underline"
+        aria-label="Sign up for our mailing list"
+      >
+        Join Our Mailing List
+      </Link>
+
+      {#if $isAuthenticated}
+        <Link 
+          to="/admin/dashboard"
+          class="hover:underline"
+          aria-label="Go to dashboard"
+        >
+          Dashboard
+        </Link>
       {:else}
-        <a href="#" on:click|preventDefault={() => loginWithNostr()} class="hover:underline">Login</a>
+        <Link 
+          to="/login"
+          class="hover:underline"
+          aria-label="Login to your account"
+        >
+          Login
+        </Link>
+        <Link 
+          to="/register"
+          class="hover:underline"
+          aria-label="Create an account"
+        >
+          Register
+        </Link>
       {/if}
     </div>
+    
+    <p class="text-sm text-gray-400">
+      © {new Date().getFullYear()} All of US Directory
+    </p>
   </div>
-</footer> 
+</footer>

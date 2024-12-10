@@ -25,6 +25,8 @@
   import MailingList from "./routes/MailingList.svelte";
   import JoinDirectory from "./routes/JoinDirectory.svelte";
   import Join from "./routes/Join.svelte";
+  import Login from "./routes/login/+page.svelte";
+  import Register from "./routes/register/+page.svelte";
   
   export let url = "";
 
@@ -47,6 +49,8 @@
       
       <main class="container mx-auto px-4 py-8 flex-grow">
         <Route path="/" component={Welcome} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Route path="/organizations" component={Organizations} />
         <Route path="/announcements" component={Announcements} />
         <Route path="/reports" component={Reports} />
