@@ -39,9 +39,18 @@
     facebook: '',
     twitter: '',
     instagram: '',
-    linkedin: ''
+    linkedin: '',
+    bluesky: '',
+    threads: '',
+    mastodon: '',
+    nostr: ''
   });
   const showSocialFeeds = writable(false);
+  const membersCount = writable<number | undefined>(undefined);
+  const staffRange = writable<[number, number]>([0, 0]);
+  const staffDescription = writable('');
+  const supporterRange = writable<[number, number]>([0, 0]);
+  const supporterDescription = writable('');
 
   // console.log('=== STORES CREATED ===');
 
@@ -110,16 +119,25 @@
       facebook: '',
       twitter: '',
       instagram: '',
-      linkedin: ''
+      linkedin: '',
+      bluesky: '',
+      threads: '',
+      mastodon: '',
+      nostr: ''
     });
     showSocialFeeds.set(orgData.showSocialFeeds || false);
+    membersCount.set(orgData.membersCount);
+    staffRange.set(orgData.staff?.range || [0, 0]);
+    staffDescription.set(orgData.staff?.description || '');
+    supporterRange.set(orgData.supporter?.range || [0, 0]);
+    supporterDescription.set(orgData.supporter?.description || '');
   }
 
   async function handleSubmit(event: Event) {
     event.preventDefault();
     
     try {
-      const formData = {
+      const formData: Organization = {
         id: $selectedOrgId,
         name: $name,
         contactEmail: $contactEmail,
@@ -135,7 +153,16 @@
         volunteerUrl: $volunteerUrl,
         joinUrl: $joinUrl,
         socialMediaLinks: $socialMediaLinks,
-        showSocialFeeds: $showSocialFeeds
+        showSocialFeeds: $showSocialFeeds,
+        membersCount: $membersCount,
+        staff: {
+          range: $staffRange,
+          description: $staffDescription
+        },
+        supporter: {
+          range: $supporterRange,
+          description: $supporterDescription
+        }
       };
 
       // Update the organization in the store
@@ -408,25 +435,49 @@
             <label class="block text-sm font-medium text-gray-700">Social Media Links</label>
             <input 
               type="url" 
-              placeholder="Facebook URL"
-              bind:value={$socialMediaLinks.facebook}
-              class="block w-full px-4 py-2 border border-gray-300 rounded-md"
-            />
-            <input 
-              type="url" 
-              placeholder="Twitter URL"
+              placeholder="Twitter username"
               bind:value={$socialMediaLinks.twitter}
               class="block w-full px-4 py-2 border border-gray-300 rounded-md"
             />
             <input 
               type="url" 
-              placeholder="Instagram URL"
+              placeholder="Bluesky handle"
+              bind:value={$socialMediaLinks.bluesky}
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input 
+              type="url" 
+              placeholder="Mastodon address"
+              bind:value={$socialMediaLinks.mastodon}
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input 
+              type="url" 
+              placeholder="Nostr (name/npub/nip-05"
+              bind:value={$socialMediaLinks.nostr}
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input 
+              type="url" 
+              placeholder="Threads username"
+              bind:value={$socialMediaLinks.threads}
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input 
+              type="url" 
+              placeholder="Instagram username"
               bind:value={$socialMediaLinks.instagram}
               class="block w-full px-4 py-2 border border-gray-300 rounded-md"
             />
             <input 
               type="url" 
-              placeholder="LinkedIn URL"
+              placeholder="Facebook username"
+              bind:value={$socialMediaLinks.facebook}
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+            <input 
+              type="url" 
+              placeholder="LinkedIn username"
               bind:value={$socialMediaLinks.linkedin}
               class="block w-full px-4 py-2 border border-gray-300 rounded-md"
             />

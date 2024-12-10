@@ -23,6 +23,11 @@ export interface Organization {
     twitter?: string;
     facebook?: string;
     instagram?: string;
+    linkedin?: string;
+    bluesky?: string;
+    threads?: string;
+    mastodon?: string;
+    nostr?: string;
   };
   logo?: string;
   joinNowLink?: string;

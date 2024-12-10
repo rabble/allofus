@@ -1,70 +1,102 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
-  import { organizations as allOrganizations } from '../../lib/data/organizations';
+  import { user } from '$lib/stores/authStore';
+  import AdminControls from '$lib/components/AdminControls.svelte';
+  import { Link } from "svelte-routing";
 
-  // Convert the imported organizations to a writable store for reactivity
-  const organizations = writable(allOrganizations);
+  const userOrganizations = writable<Array<{
+    id: string;
+    name: string;
+    description: string;
+    approved: boolean;
+  }>>([]);
 
-  const newSubmissions = writable([
-    { id: '4', name: 'New Org One' },
-    { id: '5', name: 'New Org Two' }
-  ]);
-
-  // Toggle visibility status
-  const toggleVisibility = (id: string) => {
-    organizations.update(orgs =>
-      orgs.map(org => org.id === id ? { ...org, visible: !org.visible } : org)
-    );
+  const fetchUserOrganizations = async () => {
+    try {
+      const response = await fetch('/api/organizations/user');
+      if (response.ok) {
+        const data = await response.json();
+        userOrganizations.set(data);
+      }
+    } catch (error) {
+      console.error('Failed to fetch user organizations:', error);
+    }
   };
+
+  onMount(() => {
+    fetchUserOrganizations();
+  });
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-6">Admin Dashboard</h1>
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Dashboard</h1>
+    <Link 
+      to="/add-organization"
+      class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors"
+    >
+      Add New Organization
+    </Link>
+  </div>
 
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold mb-4">Existing Organizations</h2>
-    <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-      <thead>
-        <tr>
-          <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Name</th>
-          <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Visible</th>
-          <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {#each $organizations as org}
-          <tr class="border-t">
-            <td class="px-6 py-4">{org.name}</td>
-            <td class="px-6 py-4">
-              <button
-                on:click={() => toggleVisibility(org.id)}
-                class="text-sm text-blue-500 hover:underline"
+  <AdminControls show={true}>
+    <a 
+      href="/admin/organizations" 
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+    >
+      Manage All Organizations
+    </a>
+    <a 
+      href="/admin/topics" 
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+    >
+      Manage Topics
+    </a>
+    <a 
+      href="/admin/users" 
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+    >
+      Manage Users
+    </a>
+  </AdminControls>
+
+  <div class="bg-white shadow rounded-lg p-6">
+    <h2 class="text-xl font-semibold mb-4">My Organizations</h2>
+    {#if $userOrganizations.length === 0}
+      <p class="text-gray-500">
+        You haven't created any organizations yet. 
+        <Link to="/add-organization" class="text-primary hover:underline">
+          Create your first organization
+        </Link>
+      </p>
+    {:else}
+      <div class="space-y-4">
+        {#each $userOrganizations as org}
+          <div class="border rounded-lg p-4 flex justify-between items-center">
+            <div>
+              <h3 class="font-medium">{org.name}</h3>
+              <p class="text-sm text-gray-500">
+                Status: {org.approved ? 'Approved' : 'Pending Approval'}
+              </p>
+            </div>
+            <div class="space-x-2">
+              <Link 
+                to={`/admin/edit-organization/${org.id}`}
+                class="text-primary hover:underline text-sm"
               >
-                {org.visible ? 'Visible' : 'Hidden'}
-              </button>
-            </td>
-            <td class="px-6 py-4">
-              <a href={`/admin/edit-organization/${org.id}`} class="text-sm text-blue-500 hover:underline">
                 Edit
-              </a>
-            </td>
-          </tr>
+              </Link>
+              <Link 
+                to={`/organizations/${org.id}`}
+                class="text-gray-600 hover:underline text-sm"
+              >
+                View
+              </Link>
+            </div>
+          </div>
         {/each}
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2 class="text-2xl font-semibold mb-4">New Submissions</h2>
-    <ul class="list-disc pl-6">
-      {#each $newSubmissions as submission}
-        <li class="mb-2">
-          {submission.name}
-          <a href={`/admin/edit-organization/${submission.id}`} class="ml-4 text-sm text-blue-500 hover:underline">
-            Review
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </section>
+      </div>
+    {/if}
+  </div>
 </div>

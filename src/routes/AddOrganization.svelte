@@ -3,12 +3,27 @@
   import { writable, type Writable } from 'svelte/store';
   import Select from 'svelte-select';
   import { focusAreas, engagementTypes } from "../lib/data/options";
+  import { checkAuth } from '../lib/utils/auth';
+  import { navigate } from 'svelte-routing';
+
+
+
+  onMount(async () => {
+    const isAuthed = await checkAuth();
+    if (!isAuthed) {
+      navigate('/login');
+    }
+  });
 
   interface SocialMediaLinks {
     facebook: string;
     twitter: string;
     instagram: string;
     linkedin: string;
+    bluesky: string;
+    threads: string;
+    mastodon: string;
+    nostr: string;
   }
 
   interface Organization {
@@ -29,7 +44,7 @@
     socialMediaLinks: SocialMediaLinks;
   }
 
-  // Define writable stores for form fields
+  // Define all writable stores for form fields
   const name = writable('');
   const logo = writable('');
   const locations = writable('');
@@ -42,17 +57,27 @@
   const description = writable('');
   const volunteerUrl = writable('');
   const joinNowLink = writable('');
-  const socialMediaLinks = writable({
+  const mission = writable('');
+  const size = writable('');
+  const foundedYear = writable('');
+  const geographicScope = writable('');
+  const volunteerNeeds = writable('');
+  const socialMediaLinks = writable<SocialMediaLinks>({
     facebook: '',
     twitter: '',
     instagram: '',
-    linkedin: ''
+    linkedin: '',
+    bluesky: '',
+    threads: '',
+    mastodon: '',
+    nostr: ''
   });
 
-  // Replace the string stores with array stores for selected options
+  // Selected options stores
   const selectedFocusAreas = writable<string[]>([]);
   const selectedEngagementTypes = writable<string[]>([]);
 
+  // Form state
   let isSubmitting = false;
   let errorMessage = '';
   let successMessage = '';
@@ -62,56 +87,104 @@
     try {
       isSubmitting = true;
       errorMessage = '';
-      
-      const newOrganization: Organization = {
+
+      // Validate required fields
+      if (!$name) {
+        errorMessage = 'Organization name is required';
+        return;
+      }
+      if (!$email) {
+        errorMessage = 'Contact email is required';
+        return;
+      }
+      if (!$position) {
+        errorMessage = 'Your position is required';
+        return;
+      }
+      if (!$orgEmail) {
+        errorMessage = 'Organization email is required';
+        return;
+      }
+      if (!$description) {
+        errorMessage = 'Description is required';
+        return;
+      }
+      if ($selectedFocusAreas.length === 0) {
+        errorMessage = 'Please select at least one focus area';
+        return;
+      }
+      if ($selectedEngagementTypes.length === 0) {
+        errorMessage = 'Please select at least one engagement type';
+        return;
+      }
+
+     
+      const organizationData = {
         name: $name,
         logo: $logo,
-        locations: $locations.split(',').map(loc => loc.trim()),
+        locations: $locations.split(',').map(l => l.trim()),
         website: $website,
-        email: $email,
-        position: $position,
-        orgEmail: $orgEmail,
-        phone: $phone,
+        contact: {
+          email: $email,
+          phone: $phone
+        },
         focusAreas: $selectedFocusAreas,
         engagementTypes: $selectedEngagementTypes,
-        projects: $projects.split(',').map(proj => proj.trim()),
         description: $description,
-        volunteerUrl: $volunteerUrl,
+        mission: $mission,
+        size: $size,
+        foundedYear: $foundedYear,
+        geographicScope: $geographicScope,
+        volunteerNeeds: $volunteerNeeds,
+        socialMedia: {
+          twitter: $socialMediaLinks.twitter,
+          facebook: $socialMediaLinks.facebook,
+          instagram: $socialMediaLinks.instagram,
+          linkedin: $socialMediaLinks.linkedin,
+          bluesky: $socialMediaLinks.bluesky,
+          threads: $socialMediaLinks.threads,
+          mastodon: $socialMediaLinks.mastodon,
+          nostr: $socialMediaLinks.nostr
+        },
         joinNowLink: $joinNowLink,
-        socialMediaLinks: $socialMediaLinks
+        
       };
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      successMessage = 'Organization successfully added!';
-      // Reset form fields
-      name.set('');
-      logo.set('');
-      locations.set('');
-      website.set('');
-      email.set('');
-      position.set('');
-      orgEmail.set('');
-      phone.set('');
-      projects.set('');
-      description.set('');
-      volunteerUrl.set('');
-      joinNowLink.set('');
-      socialMediaLinks.set({
-        facebook: '',
-        twitter: '',
-        instagram: '',
-        linkedin: ''
+      const response = await fetch('/api/organizations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(organizationData)
       });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || 'Failed to create organization');
+      }
+
+      const newOrg = await response.json();
+      successMessage = 'Organization created successfully!';
       
-      // Add these to the reset logic
-      selectedFocusAreas.set([]);
-      selectedEngagementTypes.set([]);
-      
+      if (newOrg.approved) {
+        successMessage += ' Your organization is now live in the directory.';
+      } else {
+        successMessage += ' Your organization will be reviewed by an admin before appearing in the directory.';
+      }
+
+      // Wait a moment to show the success message
+      setTimeout(() => {
+        navigate(`/organizations/${newOrg.id}`);
+      }, 2000);
+
     } catch (error) {
-      errorMessage = 'Failed to add organization. Please try again.';
-      console.error('Error:', error);
+      console.error('Error creating organization:', error);
+      if (error.message.includes('Unauthorized')) {
+        errorMessage = 'Please log in to create an organization.';
+        setTimeout(() => navigate('/login'), 2000);
+      } else {
+        errorMessage = error.message || 'Failed to create organization. Please try again.';
+      }
     } finally {
       isSubmitting = false;
     }
@@ -186,95 +259,213 @@
     </div>
 
     <div>
-      <label class="block text-sm font-medium text-gray-700 mb-2">
-        Focus Areas (choose as many as apply)
+      <label for="mission" class="block text-sm font-medium text-gray-700 mb-1">
+        Mission Statement *
+      </label>
+      <textarea
+        id="mission"
+        required
+        bind:value={$mission}
+        class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+        rows="3"
+        placeholder="Organization's mission statement"
+      ></textarea>
+    </div>
+
+    <div>
+      <label for="focus-areas-select" class="block text-sm font-medium text-gray-700 mb-2">
+        Focus Areas *
       </label>
       <Select
+        id="focus-areas-select"
         items={focusAreas}
         bind:value={$selectedFocusAreas}
         multiple={true}
         placeholder="Select focus areas..."
         itemText="label"
+        inputAttributes={{ id: 'focus-areas-select' }}
       />
     </div>
 
     <div>
-      <label class="block text-sm font-medium text-gray-700 mb-2">
-        Engagement Types (what the org would welcome/benefit from)
+      <label for="engagement-types-select" class="block text-sm font-medium text-gray-700 mb-2">
+        Engagement Types *
       </label>
       <Select
+        id="engagement-types-select"
         items={engagementTypes}
         bind:value={$selectedEngagementTypes}
         multiple={true}
         placeholder="Select engagement types..."
         itemText="label"
+        inputAttributes={{ id: 'engagement-types-select' }}
       />
     </div>
 
-    <div>
-      <label for="projects" class="block text-sm font-medium text-gray-700">
-        Organization Projects (that could currently utilize volunteer help)
-      </label>
-      <textarea id="projects" bind:value={$projects} rows="3" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="size" class="block text-sm font-medium text-gray-700 mb-1">
+          Organization Size
+        </label>
+        <select
+          id="size"
+          bind:value={$size}
+          class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+        >
+          <option value="">Select size...</option>
+          <option value="1-10">1-10 people</option>
+          <option value="11-50">11-50 people</option>
+          <option value="51-200">51-200 people</option>
+          <option value="201+">201+ people</option>
+        </select>
+      </div>
 
-    <div>
-      <label for="description" class="block text-sm font-medium text-gray-700">
-        Organization Description (however long you feel appropriate to facilitate users knowing if it makes sense to seek to join or volunteer)
-      </label>
-      <textarea id="description" bind:value={$description} rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
-    </div>
-
-    <div>
-      <label for="website" class="block text-sm font-medium text-gray-700">
-        Organization Web link (if you have one)
-      </label>
-      <input type="url" id="website" bind:value={$website} class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md" />
-    </div>
-
-    <div>
-      <label for="volunteerUrl" class="block text-sm font-medium text-gray-700">
-        Organization Volunteer Link (if you have one)
-      </label>
-      <input type="url" id="volunteerUrl" bind:value={$volunteerUrl} class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md" />
-    </div>
-
-    <div>
-      <label for="joinNowLink" class="block text-sm font-medium text-gray-700">
-        Organization Join link (if you have one)
-      </label>
-      <input type="url" id="joinNowLink" bind:value={$joinNowLink} class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md" />
-    </div>
-
-    <div>
-      <label class="block text-sm font-medium text-gray-700">
-        Organization Social Media links (if you have any) *
-      </label>
-      <div class="space-y-2 mt-1">
-        <input 
-          type="url" 
-          placeholder="Facebook URL" 
-          bind:value={$socialMediaLinks.facebook}
-          class="block w-full px-4 py-2 border border-gray-300 rounded-md" 
+      <div>
+        <label for="foundedYear" class="block text-sm font-medium text-gray-700 mb-1">
+          Founded Year
+        </label>
+        <input
+          type="number"
+          id="foundedYear"
+          bind:value={$foundedYear}
+          class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+          min="1800"
+          max={new Date().getFullYear()}
+          placeholder="YYYY"
         />
-        <input 
-          type="url" 
-          placeholder="Twitter URL" 
-          bind:value={$socialMediaLinks.twitter}
-          class="block w-full px-4 py-2 border border-gray-300 rounded-md" 
-        />
-        <input 
-          type="url" 
-          placeholder="Instagram URL" 
-          bind:value={$socialMediaLinks.instagram}
-          class="block w-full px-4 py-2 border border-gray-300 rounded-md" 
-        />
-        <input 
-          type="url" 
-          placeholder="LinkedIn URL" 
-          bind:value={$socialMediaLinks.linkedin}
-          class="block w-full px-4 py-2 border border-gray-300 rounded-md" 
-        />
+      </div>
+    </div>
+
+    <div>
+      <label for="geographicScope" class="block text-sm font-medium text-gray-700 mb-1">
+        Geographic Scope *
+      </label>
+      <select
+        id="geographicScope"
+        required
+        bind:value={$geographicScope}
+        class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+      >
+        <option value="">Select scope...</option>
+        <option value="local">Local</option>
+        <option value="regional">Regional</option>
+        <option value="national">National</option>
+        <option value="international">International</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="volunteerNeeds" class="block text-sm font-medium text-gray-700 mb-1">
+        Volunteer Needs
+      </label>
+      <textarea
+        id="volunteerNeeds"
+        bind:value={$volunteerNeeds}
+        class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+        rows="3"
+        placeholder="Describe your organization's volunteer needs..."
+      ></textarea>
+    </div>
+
+    <div class="space-y-4">
+      <h3 class="text-lg font-medium text-gray-700">Social Media</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="twitter" class="block text-sm font-medium text-gray-700 mb-1">
+            Twitter
+          </label>
+          <input
+            type="url"
+            id="twitter"
+            bind:value={$socialMediaLinks.twitter}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Twitter username"
+          />
+        </div>
+        <div>
+          <label for="bluesky" class="block text-sm font-medium text-gray-700 mb-1">
+            Bluesky
+          </label>
+          <input
+            type="url"
+            id="bluesky"
+            bind:value={$socialMediaLinks.bluesky}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Bluesky handle"
+          />
+        </div>
+        <div>
+          <label for="mastodon" class="block text-sm font-medium text-gray-700 mb-1">
+            Mastodon
+          </label>
+          <input
+            type="url"
+            id="mastodon"
+            bind:value={$socialMediaLinks.mastodon}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Mastodon address"
+          />
+        </div>
+        <div>
+          <label for="nostr" class="block text-sm font-medium text-gray-700 mb-1">
+            Nostr
+          </label>
+          <input
+            type="url"
+            id="nostr"
+            bind:value={$socialMediaLinks.nostr}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Nostr (name/npub/nip-05)"
+          />
+        </div>
+        <div>
+          <label for="threads" class="block text-sm font-medium text-gray-700 mb-1">
+            Threads
+          </label>
+          <input
+            type="url"
+            id="threads"
+            bind:value={$socialMediaLinks.threads}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Threads username"
+          />
+        </div>
+        <div>
+          <label for="instagram" class="block text-sm font-medium text-gray-700 mb-1">
+            Instagram
+          </label>
+          <input
+            type="url"
+            id="instagram"
+            bind:value={$socialMediaLinks.instagram}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Instagram username"
+          />
+        </div>
+        <div>
+          <label for="facebook" class="block text-sm font-medium text-gray-700 mb-1">
+            Facebook
+          </label>
+          <input
+            type="url"
+            id="facebook"
+            bind:value={$socialMediaLinks.facebook}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Facebook username"
+          />
+        </div>
+        <div>
+          <label for="linkedin" class="block text-sm font-medium text-gray-700 mb-1">
+            LinkedIn
+          </label>
+          <input
+            type="url"
+            id="linkedin"
+            bind:value={$socialMediaLinks.linkedin}
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="LinkedIn username"
+          />
+        </div>
       </div>
     </div>
 
