@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { organizations } from '../lib/data/organizations';
+  import { organizations } from '$lib/data/organizations';
   import { socialPosts } from '../lib/data/socialContent';
   import { reports } from '../lib/data/reportsContent';
   import { goto } from '$app/navigation';

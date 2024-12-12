@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { organizations } from '../lib/data/organizations';
-  import { focusAreas } from '../lib/data/options';
-  import { Link, navigate } from 'svelte-routing';
+  import { organizations } from '$lib/data/organizations';
+  import { focusAreas } from '$lib/data/options';
+  import { goto } from '$app/navigation';
   import OrganizationCard from '../lib/components/organizations/OrganizationCard.svelte';
   
   export let id: string;
