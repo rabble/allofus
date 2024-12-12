@@ -29,9 +29,18 @@ describe('Organization API', () => {
           focusAreas: '["climate"]',
           engagementTypes: '["online"]',
           locations: '["remote"]',
+          contact: null,
+          socialMedia: null,
+          logo: null,
+          joinNowLink: null,
+          membersCount: null,
+          staff: null,
+          supporter: null,
+          approved: false,
           createdById: 'user123',
           createdAt: new Date(),
-          updatedAt: new Date()
+          updatedAt: new Date(),
+          website: null
         },
         { 
           id: '2', 
@@ -41,9 +50,18 @@ describe('Organization API', () => {
           focusAreas: '["climate"]',
           engagementTypes: '["online"]',
           locations: '["remote"]',
+          contact: null,
+          socialMedia: null,
+          logo: null,
+          joinNowLink: null,
+          membersCount: null,
+          staff: null,
+          supporter: null,
+          approved: false,
           createdById: 'user123',
           createdAt: new Date(),
-          updatedAt: new Date()
+          updatedAt: new Date(),
+          website: null
         }
       ];
 
@@ -71,7 +89,16 @@ describe('Organization API', () => {
         category: 'nonprofit',
         focusAreas: ['climate', 'justice'],
         engagementTypes: ['online'],
-        locations: ['remote']
+        locations: ['remote'],
+        contact: null,
+        socialMedia: null,
+        logo: null,
+        joinNowLink: null,
+        membersCount: null,
+        staff: null,
+        supporter: null,
+        approved: false,
+        website: null
       };
 
       mockReq = {
@@ -87,6 +114,15 @@ describe('Organization API', () => {
         focusAreas: JSON.stringify(orgData.focusAreas),
         engagementTypes: JSON.stringify(orgData.engagementTypes),
         locations: JSON.stringify(orgData.locations),
+        contact: null,
+        socialMedia: null,
+        logo: null,
+        joinNowLink: null,
+        membersCount: null,
+        staff: null,
+        supporter: null,
+        approved: false,
+        website: null,
         createdById: 'user123',
         createdAt: new Date(),
         updatedAt: new Date()
