@@ -153,27 +153,27 @@
       <ul class="space-y-2">
         {#each relatedOrganizations as relatedOrg}
           <li>
-            <Link to={`/organizations/${relatedOrg.id}`} class="text-secondary hover:text-primary">
+            <a href={`/organizations/${relatedOrg.id}`} class="text-secondary hover:text-primary">
               {relatedOrg.name}
-            </Link>
+            </a>
           </li>
         {/each}
       </ul>
       {#if relatedOrganizations.length > 0}
-        <Link 
-          to={`/organizations/${id}/related`} 
+        <a 
+          href={`/organizations/${id}/related`} 
           class="text-secondary hover:text-primary mt-4 inline-block"
         >
           View all related organizations →
-        </Link>
+        </a>
       {/if}
     </aside>
   </div>
 {:else}
   <div class="max-w-4xl mx-auto px-4 py-8">
     <h1 class="text-2xl font-bold text-red-600">Organization not found</h1>
-    <Link to="/organizations" class="text-secondary hover:text-primary mt-4 inline-block">
+    <a href="/organizations" class="text-secondary hover:text-primary mt-4 inline-block">
       Return to Organizations
-    </Link>
+    </a>
   </div>
 {/if}

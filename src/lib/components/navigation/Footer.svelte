@@ -14,28 +14,28 @@
       </a>
 
       {#if $isAuthenticated}
-        <Link 
-          to="/admin/dashboard"
+        <a 
+          href="/admin/dashboard"
           class="hover:underline"
           aria-label="Go to dashboard"
         >
           Dashboard
-        </Link>
+        </a>
       {:else}
-        <Link 
-          to="/login"
+        <a 
+          href="/login"
           class="hover:underline"
           aria-label="Login to your account"
         >
           Login
-        </Link>
-        <Link 
-          to="/register"
+        </a>
+        <a 
+          href="/register"
           class="hover:underline"
           aria-label="Create an account"
         >
           Register
-        </Link>
+        </a>
       {/if}
     </div>
     
