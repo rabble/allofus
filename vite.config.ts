@@ -31,7 +31,6 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      //'@welshman/client': path.resolve(__dirname, 'welshman/packages/app/src'),
       $lib: path.resolve('./src/lib')
     },
   }

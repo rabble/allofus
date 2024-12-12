@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import "../app.css";
+  import './app.css';
 
   onMount(() => {
     document.title = "All of US Directory";
