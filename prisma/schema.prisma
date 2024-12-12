@@ -35,17 +35,35 @@ model User {
 }
 
 model Organization {
-  id          String   @id @default(cuid())
-  name        String
-  description String
-  website     String?
-  email       String?
-  phone       String?
-  address     String?
-  focusAreas  String   // Stored as JSON string
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  approved    Boolean  @default(false)
-  createdBy   User     @relation("UserOrganizations", fields: [createdById], references: [id])
-  createdById String
+  id            String   @id @default(cuid())
+  name          String
+  description   String
+  category      String
+  website       String?
+  focusAreas    String   // JSON array
+  engagementTypes String // JSON array
+  locations     String   // JSON array
+  email         String?
+  phone         String?
+  signal        String?
+  twitter       String?
+  facebook      String?
+  instagram     String?
+  linkedin      String?
+  bluesky       String?
+  threads       String?
+  mastodon      String?
+  nostr         String?
+  logo          String?
+  joinNowLink   String?
+  membersCount  Int?
+  staffRange    String?  // JSON array [min, max]
+  staffDesc     String?
+  supportRange  String?  // JSON array [min, max]
+  supportDesc   String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  approved      Boolean  @default(false)
+  createdBy     User     @relation("UserOrganizations", fields: [createdById], references: [id])
+  createdById   String
 }
