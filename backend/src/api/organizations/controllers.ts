@@ -14,13 +14,6 @@ const getUserOrganizations = async (req, res) => {
   }
 };
 
-module.exports = {
-  getUserOrganizations,
-  createOrganization,
-  updateOrganization,
-  deleteOrganization
-};
-
 const createOrganization = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -94,4 +87,11 @@ const deleteOrganization = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Failed to delete organization' });
   }
+};
+
+module.exports = {
+  getUserOrganizations,
+  createOrganization,
+  updateOrganization, 
+  deleteOrganization
 };
