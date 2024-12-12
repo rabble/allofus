@@ -1,18 +1,17 @@
 <script lang="ts">
-  import { Link } from 'svelte-routing';
   import { isAuthenticated } from '../../stores/authStore';
 </script>
 
 <footer class="bg-gray-800 text-white p-4">
   <div class="container mx-auto text-center space-y-4">
     <div class="flex justify-center space-x-6">
-      <Link 
-        to="/mailing-list"
+      <a 
+        href="/mailing-list"
         class="hover:underline"
         aria-label="Sign up for our mailing list"
       >
         Join Our Mailing List
-      </Link>
+      </a>
 
       {#if $isAuthenticated}
         <Link 

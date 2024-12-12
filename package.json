@@ -4,13 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@tsconfig/svelte": "^5.0.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
@@ -28,8 +30,6 @@
     "lucia": "^3.2.2",
     "nostr-tools": "^2.10.4",
     "pnpm": "^9.14.4",
-    "svelte-routing": "^2.13.0",
-    "svelte-select": "^5.8.3",
-    "svelte-spa-router": "^4.0.1"
+    "svelte-select": "^5.8.3"
   }
 }
