@@ -1,6 +1,6 @@
-const { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } = require('../organizations');
-const { prismaMock } = require('../../test/setup');
-const { Request, Response } = require('express');
+import { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } from '../organizations';
+import { prismaMock } from '../../test/setup';
+import { Request, Response } from 'express';
 
 describe('Organization API', () => {
   let mockReq: Partial<Request>;
