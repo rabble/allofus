@@ -1,4 +1,4 @@
-import { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } from '../organizations';
+import { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } from '../organizations/controllers';
 import { prismaMock } from '../../test/setup';
 import { Request, Response } from 'express';
 
