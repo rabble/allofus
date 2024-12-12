@@ -2,16 +2,14 @@ import { createOrganization, getUserOrganizations, updateOrganization, deleteOrg
 import { PrismaClient } from '@prisma/client';
 import { prismaMock } from '../../test/setup';
 import { Request, Response } from 'express';
+import { ParamsDictionary } from 'express-serve-static-core';
+import { ParsedQs } from 'qs';
 
 describe('Organization API', () => {
-  /** @type {Partial<Request>} */
-  let mockReq;
-  /** @type {Partial<Response>} */
-  let mockRes;
-  /** @type {jest.Mock} */
-  let mockJson;
-  /** @type {jest.Mock} */
-  let mockStatus;
+  let mockReq: Partial<Request>;
+  let mockRes: Partial<Response>;
+  let mockJson: jest.Mock;
+  let mockStatus: jest.Mock;
 
   beforeEach(() => {
     mockJson = jest.fn();

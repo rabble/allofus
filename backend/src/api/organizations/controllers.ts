@@ -16,7 +16,7 @@ export const getUserOrganizations = async (req: Request, res: Response) => {
   }
 };
 
-const createOrganization = async (req, res) => {
+export const createOrganization = async (req: Request, res: Response) => {
   try {
     const userId = req.user.id;
     const organization = await prisma.organization.create({
@@ -38,7 +38,7 @@ const createOrganization = async (req, res) => {
   }
 };
 
-const updateOrganization = async (req, res) => {
+export const updateOrganization = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const userId = req.user.id;
@@ -71,7 +71,7 @@ const updateOrganization = async (req, res) => {
   }
 };
 
-const deleteOrganization = async (req, res) => {
+export const deleteOrganization = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const userId = req.user.id;
@@ -91,7 +91,7 @@ const deleteOrganization = async (req, res) => {
   }
 };
 
-module.exports = {
+export {
   getUserOrganizations,
   createOrganization,
   updateOrganization, 
