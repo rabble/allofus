@@ -8,10 +8,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {
-      tsconfig: 'tsconfig.json',
-      babelConfig: {
-        presets: ['@babel/preset-flow']
-      }
+      tsconfig: 'tsconfig.json'
     }]
   },
   moduleNameMapper: {

@@ -1,7 +1,9 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
+import { Request, Response } from 'express';
+
 const prisma = new PrismaClient();
 
-const getUserOrganizations = async (req, res) => {
+export const getUserOrganizations = async (req: Request, res: Response) => {
   try {
     const userId = req.user.id;
     const organizations = await prisma.organization.findMany({

@@ -1,7 +1,11 @@
-const { PrismaClient } = require('@prisma/client');
-const { mockDeep } = require('jest-mock-extended');
+import { PrismaClient } from '@prisma/client';
+import { mockDeep, DeepMockProxy } from 'jest-mock-extended';
 
-const prismaMock = mockDeep();
+export type MockContext = {
+  prisma: DeepMockProxy<PrismaClient>
+}
+
+export const prismaMock = mockDeep<PrismaClient>();
 
 // Mock the prisma client
 jest.mock('../lib/prisma', () => ({
@@ -11,7 +15,3 @@ jest.mock('../lib/prisma', () => ({
 beforeEach(() => {
   jest.clearAllMocks();
 });
-
-module.exports = {
-  prismaMock
-};
