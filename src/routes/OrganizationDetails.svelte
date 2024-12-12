@@ -79,12 +79,12 @@
               <li>
                 Locations: 
                 {#each organization.locations as location, index}
-                  <Link 
-                    to={`/locations/${encodeURIComponent(location)}`} 
+                  <a 
+                    href={`/locations/${encodeURIComponent(location)}`} 
                     class="text-secondary hover:text-primary"
                   >
                     {location}
-                  </Link>{index < organization.locations.length - 1 ? ', ' : ''}
+                  </a>{index < organization.locations.length - 1 ? ', ' : ''}
                 {/each}
               </li>
             {/if}
