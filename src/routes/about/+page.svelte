@@ -1,3 +1,5 @@
+<script lang="ts">
+</script>
 
 <div class="container mx-auto px-4 py-8 max-w-4xl">
   <h1 class="text-4xl font-bold text-primary mb-6">
@@ -40,21 +42,21 @@
         Broadly speaking, The All of Us member groups are grassroots-friendly, progressive-leaning, non-commercial, and non-sectarian; they seek and give solidarity; they are welcoming and value participation. They are eager to reply to requests from people who want to join or to help them, and they are able to welcome and involve people who would fit well.
       </p>
       <p class="text-gray-700 leading-relaxed">
-        Want to add your organization to the directory? <Link to="/join-directory" class="text-blue-600 hover:underline font-medium">Learn about joining the directory</Link> or <Link to="/add-organization" class="text-blue-600 hover:underline font-medium">add your organization now</Link>.
+        Want to add your organization to the directory? <a href="/join-directory" class="text-blue-600 hover:underline font-medium">Learn about joining the directory</a> or <a href="/add-organization" class="text-blue-600 hover:underline font-medium">add your organization now</a>.
       </p>
     </section>
 
     <section>
       <h2 class="text-2xl font-bold text-primary mb-4">What Individuals Use the Directory?</h2>
       <p class="text-gray-700 leading-relaxed">
-        Anyone who wants to connect with others to address concerns about what is happening in the U.S. – whether in response to Trump or MAGA-ism or in response to the general need to improve life in our communities, stop negative policies, win positive gains, and build with others towards a better world. Do you want to try searching the database? <Link to="/organizations" class="text-blue-600 hover:underline font-medium">Start here</Link>.
+        Anyone who wants to connect with others to address concerns about what is happening in the U.S. – whether in response to Trump or MAGA-ism or in response to the general need to improve life in our communities, stop negative policies, win positive gains, and build with others towards a better world. Do you want to try searching the database? <a href="/organizations" class="text-blue-600 hover:underline font-medium">Start here</a>.
       </p>
     </section>
 
     <section>
       <h2 class="text-2xl font-bold text-primary mb-4">Who Decides What's Included?</h2>
       <p class="text-gray-700 leading-relaxed">
-        We want users to find what they seek. Thus we work with organizations to be forthright in presenting themselves, their aims, their values, and their allegiances for assessment via their All of US unique pages. Have questions? <Link to="/contact" class="text-blue-600 hover:underline font-medium">Contact us</Link>.
+        We want users to find what they seek. Thus we work with organizations to be forthright in presenting themselves, their aims, their values, and their allegiances for assessment via their All of US unique pages. Have questions? <a href="/contact" class="text-blue-600 hover:underline font-medium">Contact us</a>.
       </p>
     </section>
 
@@ -64,7 +66,7 @@
 
     <div class="mt-8">
       <a 
-        href="https://your-mailerlite-signup-form-link.com" 
+        href="/mailing-list"
         class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
         aria-label="Sign up for our mailing list"
         tabindex="0"
