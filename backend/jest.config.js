@@ -7,18 +7,9 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js', 'json'],
   setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
   transform: {
-    '^.+\\.tsx?$': [
-      'ts-jest',
-      {
-        tsconfig: 'tsconfig.json',
-        useESM: false
-      }
-    ]
+    '^.+\\.tsx?$': ['ts-jest']
   },
   moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
-  },
-  transformIgnorePatterns: [
-    'node_modules/(?!(tslib|@babel/runtime)/)'
-  ]
+    '^@/(.*)$': '<rootDir>/src/$1'
+  }
 };
