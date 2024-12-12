@@ -1,5 +1,5 @@
 import { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } from '../organizations/controllers';
-import type { Organization } from '@prisma/client';
+import { PrismaClient, Organization } from '@prisma/client';
 import { prismaMock } from '../../test/setup';
 import { Request, Response } from 'express';
 
