@@ -35,35 +35,24 @@ model User {
 }
 
 model Organization {
-  id            String   @id @default(cuid())
-  name          String
-  description   String
-  category      String
-  website       String?
-  focusAreas    String   // JSON array
-  engagementTypes String // JSON array
-  locations     String   // JSON array
-  email         String?
-  phone         String?
-  signal        String?
-  twitter       String?
-  facebook      String?
-  instagram     String?
-  linkedin      String?
-  bluesky       String?
-  threads       String?
-  mastodon      String?
-  nostr         String?
-  logo          String?
-  joinNowLink   String?
-  membersCount  Int?
-  staffRange    String?  // JSON array [min, max]
-  staffDesc     String?
-  supportRange  String?  // JSON array [min, max]
-  supportDesc   String?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  approved      Boolean  @default(false)
-  createdBy     User     @relation("UserOrganizations", fields: [createdById], references: [id])
-  createdById   String
+  id              String   @id @default(cuid())
+  name            String
+  description     String
+  category        String
+  website         String?
+  focusAreas      String   // JSON array
+  engagementTypes String   // JSON array
+  locations       String   // JSON array
+  contact         String?  // JSON object {email?, phone?, signal?}
+  socialMedia     String?  // JSON object {twitter?, facebook?, instagram?, linkedin?, bluesky?, threads?, mastodon?, nostr?}
+  logo            String?
+  joinNowLink     String?
+  membersCount    Int?
+  staff           String?  // JSON object {range: [number, number], description: string}
+  supporter       String?  // JSON object {range: [number, number], description: string}
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  approved        Boolean  @default(false)
+  createdBy       User     @relation("UserOrganizations", fields: [createdById], references: [id])
+  createdById     String
 }
