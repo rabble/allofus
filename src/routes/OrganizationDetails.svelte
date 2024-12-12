@@ -1,31 +1,11 @@
 <script lang="ts">
-  import { organizations } from '$lib/data/organizations';
-  import { socialPosts } from '../lib/data/socialContent';
-  import { reports } from '../lib/data/reportsContent';
   import { goto } from '$app/navigation';
   import AnnouncementFeed from '../lib/components/content/AnnouncementFeed.svelte';
   import ReportsList from '../lib/components/content/ReportsList.svelte';
   
-  export let id: string;
+  export let data;
+  const { organization, organizationPosts, organizationReports, relatedOrganizations } = data;
   
-  $: organization = organizations.find(org => org.id === id);
-  $: organizationPosts = socialPosts.filter(post => post.organizationId === id);
-  $: organizationReports = reports.filter(report => report.organizationId === id);
-  $: relatedOrganizations = organization ? findRelatedOrganizations(id) : [];
-  
-  function findRelatedOrganizations(currentOrgId: string) {
-    if (!organization) return [];
-    return organizations
-      .filter(org => org.id !== currentOrgId)
-      .map(org => {
-        const commonFocusAreas = org.focusAreas.filter(area => organization.focusAreas.includes(area)).length;
-        const commonEngagementTypes = org.engagementTypes.filter(type => organization.engagementTypes.includes(type)).length;
-        const similarityScore = commonFocusAreas + commonEngagementTypes;
-        return { ...org, similarityScore };
-      })
-      .sort((a, b) => b.similarityScore - a.similarityScore)
-      .slice(0, 10);
-  }
 </script>
 
 {#if organization}
