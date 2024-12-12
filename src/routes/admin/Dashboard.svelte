@@ -3,7 +3,6 @@
   import { writable } from 'svelte/store';
   import { user } from '$lib/stores/authStore';
   import AdminControls from '$lib/components/AdminControls.svelte';
-  import { Link } from "svelte-routing";
 
   const userOrganizations = writable<Array<{
     id: string;
@@ -32,12 +31,12 @@
 <div class="container mx-auto px-4 py-8">
   <div class="flex justify-between items-center mb-6">
     <h1 class="text-2xl font-bold">Dashboard</h1>
-    <Link 
-      to="/add-organization"
+    <a 
+      href="/add-organization"
       class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors"
     >
       Add New Organization
-    </Link>
+    </a>
   </div>
 
   <AdminControls show={true}>
@@ -66,9 +65,9 @@
     {#if $userOrganizations.length === 0}
       <p class="text-gray-500">
         You haven't created any organizations yet. 
-        <Link to="/add-organization" class="text-primary hover:underline">
+        <a href="/add-organization" class="text-primary hover:underline">
           Create your first organization
-        </Link>
+        </a>
       </p>
     {:else}
       <div class="space-y-4">
@@ -81,18 +80,18 @@
               </p>
             </div>
             <div class="space-x-2">
-              <Link 
-                to={`/admin/edit-organization/${org.id}`}
+              <a 
+                href={`/admin/edit-organization/${org.id}`}
                 class="text-primary hover:underline text-sm"
               >
                 Edit
-              </Link>
-              <Link 
-                to={`/organizations/${org.id}`}
+              </a>
+              <a 
+                href={`/organizations/${org.id}`}
                 class="text-gray-600 hover:underline text-sm"
               >
                 View
-              </Link>
+              </a>
             </div>
           </div>
         {/each}

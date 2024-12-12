@@ -2,7 +2,7 @@
   import { organizations } from '../lib/data/organizations';
   import { socialPosts } from '../lib/data/socialContent';
   import { reports } from '../lib/data/reportsContent';
-  import { Link, navigate } from 'svelte-routing';
+  import { goto } from '$app/navigation';
   import AnnouncementFeed from '../lib/components/content/AnnouncementFeed.svelte';
   import ReportsList from '../lib/components/content/ReportsList.svelte';
   
@@ -31,9 +31,9 @@
 {#if organization}
   <div class="max-w-6xl mx-auto px-4 py-8 flex">
     <div class="flex-1">
-      <Link to="/organizations" class="text-secondary hover:text-primary mb-6 inline-block">
+      <a href="/organizations" class="text-secondary hover:text-primary mb-6 inline-block">
         ← Back to Organizations
-      </Link>
+      </a>
       
       <div class="bg-white shadow-lg rounded-lg p-8">
         <div class="flex items-start justify-between mb-6">
@@ -98,7 +98,7 @@
             <div class="flex flex-wrap gap-2">
               {#each organization.focusAreas as area}
                 <button
-                  on:click={() => navigate(`/focus-areas/${area}`)}
+                  on:click={() => goto(`/focus-areas/${area}`)}
                   class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full hover:bg-blue-200 transition-colors"
                 >
                   {area}
@@ -112,7 +112,7 @@
             <div class="flex flex-wrap gap-2">
               {#each organization.engagementTypes as type}
                 <button
-                  on:click={() => navigate(`/engagement-types/${type.toLowerCase()}`)}
+                  on:click={() => goto(`/engagement-types/${type.toLowerCase()}`)}
                   class="bg-green-100 text-green-800 px-3 py-1 rounded-full hover:bg-green-200 transition-colors"
                 >
                   {type}
