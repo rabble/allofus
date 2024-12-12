@@ -1,7 +1,7 @@
-const request = require('supertest');
-const { app } = require('../../app');
-const { prisma } = require('../../lib/prisma');
-const { createTestUser, createTestOrganization } = require('../helpers');
+import request from 'supertest';
+import { app } from '../../app';
+import { prisma } from '../../lib/prisma';
+import { createTestUser, createTestOrganization } from '../helpers';
 
 describe('API Integration Tests', () => {
   let authToken: string;

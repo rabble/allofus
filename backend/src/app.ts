@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const { organizationRoutes } = require('./api/organizations');
-const { authMiddleware } = require('./middleware/auth');
+import express from 'express';
+import cors from 'cors';
+import { organizationRoutes } from './api/organizations';
+import { authMiddleware } from './middleware/auth';
 
 const app = express();
 
@@ -18,4 +18,4 @@ app.use('/api/organizations', authMiddleware);
 // Routes
 app.use('/api/organizations', organizationRoutes);
 
-module.exports = { app };
+export { app };
