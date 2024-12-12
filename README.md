@@ -2,6 +2,21 @@
 
 A directory connecting individuals with organizations working across various social justice movements. Our platform helps you discover and engage with groups making real change in communities across the country.
 
+## Backend API
+
+The backend provides these API endpoints:
+
+### Authentication
+- POST /api/auth/login - Login user
+- POST /api/auth/logout - Logout user  
+- GET /api/auth/me - Get current user
+
+### Organizations
+- GET /api/organizations/user - Get user's organizations
+- POST /api/organizations - Create organization
+- PUT /api/organizations/:id - Update organization
+- DELETE /api/organizations/:id - Delete organization
+
 ## Mission
 
 All of US provides action pathways for each of us to come together to make our communities, our jobs, and our daily lives better for all of us. We are here as a service during difficult times, connecting people who care about their communities with organizations working on a wide range of issues throughout the country.
