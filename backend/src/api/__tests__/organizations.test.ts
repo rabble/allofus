@@ -1,7 +1,7 @@
-const { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } = require('../organizations/controllers');
-const { PrismaClient } = require('@prisma/client');
-const { prismaMock } = require('../../test/setup');
-const { Request, Response } = require('express');
+import { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } from '../organizations/controllers';
+import { PrismaClient } from '@prisma/client';
+import { prismaMock } from '../../test/setup';
+import { Request, Response } from 'express';
 
 describe('Organization API', () => {
   /** @type {Partial<Request>} */
