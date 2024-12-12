@@ -144,4 +144,147 @@ describe('Organization API', () => {
       expect(mockJson).toHaveBeenCalledWith(mockCreatedOrg);
     });
   });
+
+  describe('updateOrganization', () => {
+    it('should update existing organization', async () => {
+      const orgId = 'org123';
+      const updateData = {
+        name: 'Updated Org',
+        description: 'Updated description',
+        category: 'nonprofit',
+        focusAreas: ['climate', 'justice'],
+        engagementTypes: ['online'],
+        locations: ['remote']
+      };
+
+      mockReq = {
+        user: { id: 'user123' },
+        params: { id: orgId },
+        body: updateData
+      };
+
+      const existingOrg = {
+        id: orgId,
+        createdById: 'user123',
+        name: 'Old Name',
+        description: 'Old description',
+        category: 'nonprofit',
+        focusAreas: '["climate"]',
+        engagementTypes: '["online"]',
+        locations: '["remote"]',
+        contact: null,
+        socialMedia: null,
+        logo: null,
+        joinNowLink: null,
+        membersCount: null,
+        staff: null,
+        supporter: null,
+        approved: false,
+        website: null,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      const updatedOrg = {
+        ...existingOrg,
+        ...updateData,
+        focusAreas: JSON.stringify(updateData.focusAreas),
+        engagementTypes: JSON.stringify(updateData.engagementTypes),
+        locations: JSON.stringify(updateData.locations)
+      };
+
+      prismaMock.organization.findFirst.mockResolvedValue(existingOrg);
+      prismaMock.organization.update.mockResolvedValue(updatedOrg);
+
+      await updateOrganization(mockReq as Request, mockRes as Response);
+
+      expect(prismaMock.organization.findFirst).toHaveBeenCalledWith({
+        where: { id: orgId, createdById: 'user123' }
+      });
+      expect(prismaMock.organization.update).toHaveBeenCalledWith({
+        where: { id: orgId },
+        data: {
+          ...updateData,
+          focusAreas: JSON.stringify(updateData.focusAreas),
+          engagementTypes: JSON.stringify(updateData.engagementTypes),
+          locations: JSON.stringify(updateData.locations)
+        }
+      });
+      expect(mockJson).toHaveBeenCalledWith(updatedOrg);
+    });
+
+    it('should return 404 if organization not found', async () => {
+      mockReq = {
+        user: { id: 'user123' },
+        params: { id: 'nonexistent' },
+        body: { name: 'Updated Org' }
+      };
+
+      prismaMock.organization.findFirst.mockResolvedValue(null);
+
+      await updateOrganization(mockReq as Request, mockRes as Response);
+
+      expect(mockStatus).toHaveBeenCalledWith(404);
+      expect(mockJson).toHaveBeenCalledWith({ error: 'Organization not found' });
+    });
+  });
+
+  describe('deleteOrganization', () => {
+    it('should delete existing organization', async () => {
+      const orgId = 'org123';
+      mockReq = {
+        user: { id: 'user123' },
+        params: { id: orgId }
+      };
+
+      const existingOrg = {
+        id: orgId,
+        createdById: 'user123',
+        name: 'Org to Delete',
+        description: 'To be deleted',
+        category: 'nonprofit',
+        focusAreas: '["climate"]',
+        engagementTypes: '["online"]',
+        locations: '["remote"]',
+        contact: null,
+        socialMedia: null,
+        logo: null,
+        joinNowLink: null,
+        membersCount: null,
+        staff: null,
+        supporter: null,
+        approved: false,
+        website: null,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+
+      prismaMock.organization.findFirst.mockResolvedValue(existingOrg);
+      prismaMock.organization.delete.mockResolvedValue(existingOrg);
+
+      await deleteOrganization(mockReq as Request, mockRes as Response);
+
+      expect(prismaMock.organization.findFirst).toHaveBeenCalledWith({
+        where: { id: orgId, createdById: 'user123' }
+      });
+      expect(prismaMock.organization.delete).toHaveBeenCalledWith({
+        where: { id: orgId }
+      });
+      expect(mockStatus).toHaveBeenCalledWith(204);
+    });
+
+    it('should return 404 if organization not found', async () => {
+      mockReq = {
+        user: { id: 'user123' },
+        params: { id: 'nonexistent' }
+      };
+
+      prismaMock.organization.findFirst.mockResolvedValue(null);
+
+      await deleteOrganization(mockReq as Request, mockRes as Response);
+
+      expect(mockStatus).toHaveBeenCalledWith(404);
+      expect(mockJson).toHaveBeenCalledWith({ error: 'Organization not found' });
+    });
+  });
 });
