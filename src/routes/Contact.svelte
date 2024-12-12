@@ -55,4 +55,16 @@
   {#if feedback}
     <p class="mt-4 text-sm text-green-500">{feedback}</p>
   {/if}
+
+  <div class="mb-8">
+    <br>
+    <img 
+      src="/assets/solidarity.jpg"
+      alt="People working together in mutual aid"
+      class="w-full h-auto rounded-lg shadow-lg"
+      loading="lazy"
+    />
+  </div>
 </div> 
+
+

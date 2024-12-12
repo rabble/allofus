@@ -13,6 +13,49 @@
   $: latestReports = [...reports]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 5);
+
+    const muralImages = [
+      {
+        src: '/assets/BLM_street_art.jpg',
+        alt: 'Black Lives Matter street art'
+      },
+      {
+        src: '/assets/diego_rivera_mural.jpg',
+        alt: 'Diego Rivera mural depicting social justice'
+      },
+      {
+        src: '/assets/in_solidarity_mural.jpg',
+        alt: 'In solidarity community mural'
+      },
+      {
+        src: '/assets/solar_commons_mural.jpg',
+        alt: 'Solar commons mural'
+      },
+      {
+        src: '/assets/students_trafford.jpg',
+        alt: 'Students at Trafford'
+      },
+      {
+        src: '/assets/chalk_mural.jpg',
+        alt: 'Chalk mural artwork'
+      },
+      {
+        src: '/assets/imagine_wall.jpg',
+        alt: 'Imagine wall mural'
+      },
+      {
+        src: '/assets/iowa_mural.jpg',
+        alt: 'Iowa community mural'
+      },
+      {
+        src: '/assets/solidarity.jpg',
+        alt: 'Solidarity artwork'
+      }
+    ];
+  
+    // Select a random image
+    const randomImage = muralImages[Math.floor(Math.random() * muralImages.length)];
+
 </script>
 
 <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto my-8">
@@ -37,6 +80,17 @@
       <h2 class="text-xl font-semibold text-primary mb-3">Search Now: Get Involved</h2>
       <p>Use your skills for positive change, learn new ones, and connect with campaigns and organizations that need your help to help your community.</p>
     </a>
+  </div>
+
+
+  <div class="mb-8">
+    <br>
+    <img 
+      src={randomImage.src}
+      alt={randomImage.alt}
+      class="w-full h-auto rounded-lg shadow-lg"
+      loading="lazy"
+    />
   </div>
 </div>
 

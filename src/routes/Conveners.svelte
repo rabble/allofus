@@ -49,4 +49,15 @@
       </p>
     </div>
   </div>
+
+  <div class="mb-8">
+    <br>
+    <img 
+      src="/assets/chalk_mural.jpg"
+      alt="People working together in mutual aid"
+      class="w-full h-auto rounded-lg shadow-lg"
+      loading="lazy"
+    />
+  </div>
+
 </div>

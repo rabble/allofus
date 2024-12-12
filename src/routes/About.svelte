@@ -7,6 +7,16 @@
     All of US: A Directory To Connect, Care, and Build
   </h1>
 
+  <!-- Image Section -->
+  <div class="mb-8">
+    <img 
+      src="/assets/iowa_mural.jpg"
+      alt="Iowa Mural"
+      class="w-full h-auto rounded-lg shadow-lg"
+      loading="lazy"
+    />
+  </div>
+
   <div class="space-y-8">
     <section>
       <h2 class="text-2xl font-bold text-primary mb-4">What Is Our Goal?</h2>

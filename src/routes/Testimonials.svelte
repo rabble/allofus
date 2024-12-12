@@ -60,4 +60,14 @@
       </div>
     {/each}
   </div>
+
+  <div class="mb-8">
+    <br>
+    <img 
+      src="/assets/in_solidarity_mural.jpg"
+      alt="People working together in mutual aid"
+      class="w-full h-auto rounded-lg shadow-lg"
+      loading="lazy"
+    />
+  </div>
 </div> 
