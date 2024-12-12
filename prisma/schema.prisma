@@ -15,24 +15,23 @@ model Session {
 }
 
 model Key {
-  id      String   @id @unique
-  userId  String
-  user    User     @relation(fields: [userId], references: [id])
+  id             String  @id @unique
+  userId         String
+  user           User    @relation(fields: [userId], references: [id])
   hashedPassword String?
 }
 
 model User {
-  id           String    @id @unique
-  username     String    @unique
-  email        String    @unique
+  id           String         @id @unique
+  username     String         @unique
+  email        String         @unique
   auth_session Session[]
   key          Key[]
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
-  role         String    @default("USER")
-  isAdmin      Boolean   @default(false)
-- organizations Organization[]
-+ organizations Organization[] @relation("UserOrganizations") // This defines the relation name
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  role         String         @default("USER")
+  isAdmin      Boolean        @default(false)
+  organizations Organization[] @relation("UserOrganizations")
 }
 
 model Organization {
