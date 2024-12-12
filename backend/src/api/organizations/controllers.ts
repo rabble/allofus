@@ -1,9 +1,7 @@
-import { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
-
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-export const getUserOrganizations = async (req: Request, res: Response) => {
+const getUserOrganizations = async (req, res) => {
   try {
     const userId = req.user.id;
     const organizations = await prisma.organization.findMany({
@@ -16,7 +14,14 @@ export const getUserOrganizations = async (req: Request, res: Response) => {
   }
 };
 
-export const createOrganization = async (req: Request, res: Response) => {
+module.exports = {
+  getUserOrganizations,
+  createOrganization,
+  updateOrganization,
+  deleteOrganization
+};
+
+const createOrganization = async (req, res) => {
   try {
     const userId = req.user.id;
     const organization = await prisma.organization.create({
@@ -38,7 +43,7 @@ export const createOrganization = async (req: Request, res: Response) => {
   }
 };
 
-export const updateOrganization = async (req: Request, res: Response) => {
+const updateOrganization = async (req, res) => {
   try {
     const { id } = req.params;
     const userId = req.user.id;
@@ -71,7 +76,7 @@ export const updateOrganization = async (req: Request, res: Response) => {
   }
 };
 
-export const deleteOrganization = async (req: Request, res: Response) => {
+const deleteOrganization = async (req, res) => {
   try {
     const { id } = req.params;
     const userId = req.user.id;
