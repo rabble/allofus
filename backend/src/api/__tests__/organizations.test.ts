@@ -4,10 +4,14 @@ import { prismaMock } from '../../test/setup';
 import { Request, Response } from 'express';
 
 describe('Organization API', () => {
-  let mockReq: Partial<Request>;
-  let mockRes: Partial<Response>;
-  let mockJson: jest.Mock;
-  let mockStatus: jest.Mock;
+  /** @type {Partial<Request>} */
+  let mockReq;
+  /** @type {Partial<Response>} */
+  let mockRes;
+  /** @type {jest.Mock} */
+  let mockJson;
+  /** @type {jest.Mock} */
+  let mockStatus;
 
   beforeEach(() => {
     mockJson = jest.fn();
