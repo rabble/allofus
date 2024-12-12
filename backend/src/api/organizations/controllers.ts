@@ -23,7 +23,13 @@ export const createOrganization = async (req: Request, res: Response) => {
       data: {
         ...req.body,
         createdById: userId,
-        focusAreas: JSON.stringify(req.body.focusAreas)
+        focusAreas: JSON.stringify(req.body.focusAreas),
+        engagementTypes: JSON.stringify(req.body.engagementTypes),
+        locations: JSON.stringify(req.body.locations),
+        contact: req.body.contact ? JSON.stringify(req.body.contact) : null,
+        socialMedia: req.body.socialMedia ? JSON.stringify(req.body.socialMedia) : null,
+        staff: req.body.staff ? JSON.stringify(req.body.staff) : null,
+        supporter: req.body.supporter ? JSON.stringify(req.body.supporter) : null
       }
     });
     res.status(201).json(organization);
@@ -49,7 +55,13 @@ export const updateOrganization = async (req: Request, res: Response) => {
       where: { id },
       data: {
         ...req.body,
-        focusAreas: JSON.stringify(req.body.focusAreas)
+        focusAreas: JSON.stringify(req.body.focusAreas),
+        engagementTypes: JSON.stringify(req.body.engagementTypes),
+        locations: JSON.stringify(req.body.locations),
+        contact: req.body.contact ? JSON.stringify(req.body.contact) : null,
+        socialMedia: req.body.socialMedia ? JSON.stringify(req.body.socialMedia) : null,
+        staff: req.body.staff ? JSON.stringify(req.body.staff) : null,
+        supporter: req.body.supporter ? JSON.stringify(req.body.supporter) : null
       }
     });
     

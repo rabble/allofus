@@ -25,8 +25,10 @@ describe('Organization API', () => {
           id: '1', 
           name: 'Org 1',
           description: 'Test Org 1',
+          category: 'nonprofit',
           focusAreas: '["climate"]',
           engagementTypes: '["online"]',
+          locations: '["remote"]',
           createdById: 'user123',
           createdAt: new Date(),
           updatedAt: new Date()
@@ -35,8 +37,10 @@ describe('Organization API', () => {
           id: '2', 
           name: 'Org 2',
           description: 'Test Org 2',
+          category: 'nonprofit',
           focusAreas: '["climate"]',
           engagementTypes: '["online"]',
+          locations: '["remote"]',
           createdById: 'user123',
           createdAt: new Date(),
           updatedAt: new Date()
@@ -64,7 +68,10 @@ describe('Organization API', () => {
       const orgData = {
         name: 'New Org',
         description: 'Test org',
-        focusAreas: ['climate', 'justice']
+        category: 'nonprofit',
+        focusAreas: ['climate', 'justice'],
+        engagementTypes: ['online'],
+        locations: ['remote']
       };
 
       mockReq = {
@@ -76,8 +83,10 @@ describe('Organization API', () => {
         id: 'org123',
         name: orgData.name,
         description: orgData.description,
+        category: orgData.category,
         focusAreas: JSON.stringify(orgData.focusAreas),
-        engagementTypes: null,
+        engagementTypes: JSON.stringify(orgData.engagementTypes),
+        locations: JSON.stringify(orgData.locations),
         createdById: 'user123',
         createdAt: new Date(),
         updatedAt: new Date()
