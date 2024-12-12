@@ -75,7 +75,7 @@ describe('Organization API', () => {
 
       prismaMock.organization.findMany.mockResolvedValue(mockOrgs);
 
-      await getUserOrganizations(mockReq as Request, mockRes as Response);
+      await getUserOrganizations(mockReq, mockRes);
 
       expect(prismaMock.organization.findMany).toHaveBeenCalledWith({
         where: { createdById: 'user123' },
@@ -133,7 +133,7 @@ describe('Organization API', () => {
       };
       prismaMock.organization.create.mockResolvedValue(mockCreatedOrg);
 
-      await createOrganization(mockReq as Request, mockRes as Response);
+      await createOrganization(mockReq, mockRes);
 
       expect(prismaMock.organization.create).toHaveBeenCalledWith({
         data: {
