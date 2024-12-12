@@ -1,4 +1,5 @@
 import { createOrganization, getUserOrganizations, updateOrganization, deleteOrganization } from '../organizations/controllers';
+import type { Organization } from '@prisma/client';
 import { prismaMock } from '../../test/setup';
 import { Request, Response } from 'express';
 
@@ -20,8 +21,26 @@ describe('Organization API', () => {
   describe('getUserOrganizations', () => {
     it('should return user organizations', async () => {
       const mockOrgs = [
-        { id: '1', name: 'Org 1' },
-        { id: '2', name: 'Org 2' }
+        { 
+          id: '1', 
+          name: 'Org 1',
+          description: 'Test Org 1',
+          focusAreas: '["climate"]',
+          engagementTypes: '["online"]',
+          createdById: 'user123',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        { 
+          id: '2', 
+          name: 'Org 2',
+          description: 'Test Org 2',
+          focusAreas: '["climate"]',
+          engagementTypes: '["online"]',
+          createdById: 'user123',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }
       ];
 
       mockReq = {
@@ -53,7 +72,16 @@ describe('Organization API', () => {
         body: orgData
       };
 
-      const mockCreatedOrg = { ...orgData, id: 'org123' };
+      const mockCreatedOrg = {
+        id: 'org123',
+        name: orgData.name,
+        description: orgData.description,
+        focusAreas: JSON.stringify(orgData.focusAreas),
+        engagementTypes: null,
+        createdById: 'user123',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
       prismaMock.organization.create.mockResolvedValue(mockCreatedOrg);
 
       await createOrganization(mockReq as Request, mockRes as Response);
