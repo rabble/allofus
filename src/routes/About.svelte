@@ -61,10 +61,6 @@
       </p>
     </section>
 
-    <p class="text-sm text-gray-500 italic mt-8 border-t pt-4">
-      All sects, whiners, complainers, no good counterproductive my way or the highway types—steer clear.
-    </p>
-
     <div class="mt-8">
       <a 
         href="https://your-mailerlite-signup-form-link.com" 
