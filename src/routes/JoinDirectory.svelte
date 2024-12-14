@@ -59,10 +59,6 @@
       <li>Your organization values mutual support and collective action.</li>
     </ul>
 
-    <p class="text-base text-gray-600 italic mb-6">
-      Subtext: All sects, whiners, complainers, no good counterproductive my-way-or-the-highway types – steer clear.
-    </p>
-
     <p class="text-base text-gray-700 mb-8">
       If Your organization complies with the six conditions noted above, and you wish to be in the AllofUS directory, please fill out the form below. In a few days we will reply. If all goes well, we will send an ID and PW you can use to access a second form whose contents, once you complete and submit it, will automatically compose a unique page for your organization in the AllofUS Directory.
     </p>
