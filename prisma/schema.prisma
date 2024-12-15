@@ -31,8 +31,7 @@ model User {
   updatedAt    DateTime  @updatedAt
   role         String    @default("USER")
   isAdmin      Boolean   @default(false)
-- organizations Organization[]
-+ organizations Organization[] @relation("UserOrganizations") // This defines the relation name
+  organizations Organization[] @relation("UserOrganizations")
 }
 
 model Organization {
