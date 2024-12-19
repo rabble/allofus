@@ -1,0 +1,2 @@
+- this is a svelte 4 project that uses svelte-routes never sveltekit
+- use svelte-routes for routing

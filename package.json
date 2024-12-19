@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.47.6",
+    "@welshman/app": "^0.0.34",
+    "@welshman/signer": "^0.0.17",
     "nostr-tools": "^2.10.4",
     "pnpm": "^9.14.4",
     "svelte-routing": "^2.13.0",

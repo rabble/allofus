@@ -25,8 +25,8 @@
   import MailingList from "./routes/MailingList.svelte";
   import JoinDirectory from "./routes/JoinDirectory.svelte";
   import Join from "./routes/Join.svelte";
-  import Login from "./routes/login/+page.svelte";
-  import Register from "./routes/register/+page.svelte";
+  //import Login from "./routes/login/+page.svelte";
+  //import Register from "./routes/register/+page.svelte";
   
   export let url = "";
 
@@ -37,8 +37,8 @@
   });
 
   const handleLogin = () => {
-    //const publicKey = loginWithNostr();
-    //console.log('Logged in with Nostr, public key:', publicKey);
+    const publicKey = loginWithNostr();
+    console.log('Logged in with Nostr, public key:', publicKey);
   };
 </script>
 
