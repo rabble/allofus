@@ -90,7 +90,7 @@
     {/if}
   </div>
 
-  <NavLink to="/feed" className="text-white font-bold">Socials</NavLink>
+  <NavLink to="/feed" className="text-white font-bold">Social Media</NavLink>
   
   <div class="relative inline-block">
     <button 
